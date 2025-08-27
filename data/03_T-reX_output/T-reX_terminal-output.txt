@@ -1,0 +1,3357 @@
+(trex-macro) stew@stew-kubu-box:~/code/gh/T-reX/src/T-reX$ python main.py
+Using environment variable BRIGHTWAY2_DIR for data directory:
+/home/stew/code/bw2-data
+
+    ================================================================================
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             ** Starting the T-reX tool **                          
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ================================================================================
+    
+                               ____________________                             
+                             /                    \                             
+                            | Arrrgh!!! a T-reX!!! |                            
+                            | Run away!!!          |                            
+                             \                    /                             
+                               ====================                             
+                                                    \                           
+                                                     \                          
+                                                     \                          
+                                                      \                         
+                                                           .       .            
+                                                          / `.   .' \           
+                                              .---.  <    > <    >  .---.       
+                                              |    \  \ - ~ ~ - /  /    |       
+                                  _____        ~-..-~             ~-..-~        
+                               |     |   \~~~\.'                    `./~~~/     
+                              ---------   \__/                        \__/      
+                              .'  O    \     /               /       \  "       
+                          (_____,    `._.'               |         }  \/~~~/    
+                            `----.          /       }     |        /    \__/    
+                                `-.      |       /      |       /      `. ,~~|  
+                                  ~-.__|      /_ - ~ ^|      /- _      `..-'   f:  f:
+                                       |     /        |     /     ~-.     `-. _|| _||_
+                                       |_____|        |_____|         ~ - . _ _ _ _ __>
+
+
+
+
+------------------------------------------------------------
+
+
+Starting T-reX for 9/9 databases in project default-3.9.1-premise-sep
+--------------------------------------------------
+	SSP1-PkBudg500-2020
+	SSP1-PkBudg500-2030
+	SSP1-PkBudg500-2040
+	SSP1-PkBudg500-2050
+	SSP5-Base-2020
+	SSP5-Base-2030
+	SSP5-Base-2040
+	SSP5-Base-2050
+	ecoinvent-3.9.1-cutoff
+
+* Deleting previous project T-reX_macro
+
+* Project default-3.9.1-premise-sep will be copied to a new project: T-reX_macro
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (1/9): SSP1-PkBudg500-2020**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2020', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP1-PkBudg500-2020
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP1-PkBudg500-2020, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|██████████████████████████████████████████████████████████| 28562/28562 [00:00<00:00, 95826.21it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 838695/838695 [00:45<00:00, 18565.97it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28562/28562 [00:02<00:00, 10001.71it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP1-PkBudg500-2020> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|    907
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP1-PkBudg500-2020 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+645                   market for aluminium alloy, AlLi      aluminium      GLO
+384                  market for aluminium alloy, AlMg3      aluminium      GLO
+380  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+677  market for aluminium around steel bi-metal str...      aluminium      GLO
+708  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+605                               market for zinc slag           zinc      GLO
+4                              market for zinc sulfide           zinc      GLO
+296                         market for zirconium oxide      zirconium      GLO
+608         market for zirconium sponge, nuclear-grade      zirconium      GLO
+301                 market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2020/material_activities.csv
+
+*** Searching for material exchanges in SSP1-PkBudg500-2020 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP1-PkBudg500-2020
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2020/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (2/9): SSP1-PkBudg500-2030**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2030', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP1-PkBudg500-2030
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP1-PkBudg500-2030, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28575/28575 [00:00<00:00, 111717.11it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 839648/839648 [00:44<00:00, 18927.83it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28575/28575 [00:02<00:00, 12639.42it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP1-PkBudg500-2030> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|   1018
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP1-PkBudg500-2030 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+81                    market for aluminium alloy, AlLi      aluminium      GLO
+351                  market for aluminium alloy, AlMg3      aluminium      GLO
+296  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+539  market for aluminium around steel bi-metal str...      aluminium      GLO
+72   market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+292                               market for zinc slag           zinc      GLO
+131                            market for zinc sulfide           zinc      GLO
+318                         market for zirconium oxide      zirconium      GLO
+140         market for zirconium sponge, nuclear-grade      zirconium      GLO
+706                 market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2030/material_activities.csv
+
+*** Searching for material exchanges in SSP1-PkBudg500-2030 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP1-PkBudg500-2030
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2030/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (3/9): SSP1-PkBudg500-2040**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2040', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP1-PkBudg500-2040
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP1-PkBudg500-2040, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28575/28575 [00:00<00:00, 107457.84it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 839294/839294 [00:44<00:00, 18655.85it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28575/28575 [00:02<00:00, 12346.40it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP1-PkBudg500-2040> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|   1020
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP1-PkBudg500-2040 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+161                   market for aluminium alloy, AlLi      aluminium      GLO
+439                  market for aluminium alloy, AlMg3      aluminium      GLO
+576  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+90   market for aluminium around steel bi-metal str...      aluminium      GLO
+564  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+501                               market for zinc slag           zinc      GLO
+706                            market for zinc sulfide           zinc      GLO
+225                         market for zirconium oxide      zirconium      GLO
+419         market for zirconium sponge, nuclear-grade      zirconium      GLO
+511                 market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2040/material_activities.csv
+
+*** Searching for material exchanges in SSP1-PkBudg500-2040 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP1-PkBudg500-2040
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2040/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (4/9): SSP1-PkBudg500-2050**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2050', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP1-PkBudg500-2050
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP1-PkBudg500-2050, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28575/28575 [00:00<00:00, 116410.78it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 839294/839294 [00:56<00:00, 14873.01it/s]
+Filling out exchange data
+100%|███████████████████████████████████████████████████████████| 28575/28575 [00:03<00:00, 9154.57it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP1-PkBudg500-2050> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|   1020
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP1-PkBudg500-2050 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+265                   market for aluminium alloy, AlLi      aluminium      GLO
+215                  market for aluminium alloy, AlMg3      aluminium      GLO
+292  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+258  market for aluminium around steel bi-metal str...      aluminium      GLO
+298  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+541                               market for zinc slag           zinc      GLO
+695                            market for zinc sulfide           zinc      GLO
+385                         market for zirconium oxide      zirconium      GLO
+497         market for zirconium sponge, nuclear-grade      zirconium      GLO
+31                  market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2050/material_activities.csv
+
+*** Searching for material exchanges in SSP1-PkBudg500-2050 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP1-PkBudg500-2050
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP1-PkBudg500-2050/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (5/9): SSP5-Base-2020**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2020', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP5-Base-2020
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP5-Base-2020, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28562/28562 [00:00<00:00, 113508.01it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 838176/838176 [00:52<00:00, 16038.25it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28562/28562 [00:02<00:00, 10136.15it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP5-Base-2020> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|    907
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP5-Base-2020 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+395                   market for aluminium alloy, AlLi      aluminium      GLO
+530                  market for aluminium alloy, AlMg3      aluminium      GLO
+428  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+518  market for aluminium around steel bi-metal str...      aluminium      GLO
+662  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+0                                 market for zinc slag           zinc      GLO
+115                            market for zinc sulfide           zinc      GLO
+161                         market for zirconium oxide      zirconium      GLO
+266         market for zirconium sponge, nuclear-grade      zirconium      GLO
+15                  market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2020/material_activities.csv
+
+*** Searching for material exchanges in SSP5-Base-2020 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP5-Base-2020
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2020/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (6/9): SSP5-Base-2030**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2030', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP5-Base-2030
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP5-Base-2030, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28562/28562 [00:00<00:00, 112583.26it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 838881/838881 [00:53<00:00, 15667.74it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28562/28562 [00:02<00:00, 10494.24it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP5-Base-2030> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|    907
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP5-Base-2030 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+590                   market for aluminium alloy, AlLi      aluminium      GLO
+163                  market for aluminium alloy, AlMg3      aluminium      GLO
+702  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+476  market for aluminium around steel bi-metal str...      aluminium      GLO
+3    market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+527                               market for zinc slag           zinc      GLO
+59                             market for zinc sulfide           zinc      GLO
+120                         market for zirconium oxide      zirconium      GLO
+564         market for zirconium sponge, nuclear-grade      zirconium      GLO
+402                 market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2030/material_activities.csv
+
+*** Searching for material exchanges in SSP5-Base-2030 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP5-Base-2030
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2030/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (7/9): SSP5-Base-2040**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2040', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP5-Base-2040
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP5-Base-2040, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28562/28562 [00:00<00:00, 102730.22it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 838454/838454 [00:52<00:00, 15888.07it/s]
+Filling out exchange data
+100%|██████████████████████████████████████████████████████████| 28562/28562 [00:02<00:00, 10243.66it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP5-Base-2040> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|    907
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP5-Base-2040 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+216                   market for aluminium alloy, AlLi      aluminium      GLO
+265                  market for aluminium alloy, AlMg3      aluminium      GLO
+66   market for aluminium alloy, metal matrix compo...      aluminium      GLO
+356  market for aluminium around steel bi-metal str...      aluminium      GLO
+615  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+432                               market for zinc slag           zinc      GLO
+159                            market for zinc sulfide           zinc      GLO
+287                         market for zirconium oxide      zirconium      GLO
+627         market for zirconium sponge, nuclear-grade      zirconium      GLO
+83                  market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2040/material_activities.csv
+
+*** Searching for material exchanges in SSP5-Base-2040 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP5-Base-2040
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2040/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (8/9): SSP5-Base-2050**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2050', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for SSP5-Base-2050
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: SSP5-Base-2050, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 28562/28562 [00:00<00:00, 220539.49it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 838453/838453 [00:52<00:00, 15963.77it/s]
+Filling out exchange data
+100%|███████████████████████████████████████████████████████████| 28562/28562 [00:02<00:00, 9836.17it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 63 MB
+
+*** The sausage <SSP5-Base-2050> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   2314
+	WasteFootprint_recycling  	| kilogram      	|     83
+	WasteFootprint_landfill   	| kilogram      	|   1680
+	WasteFootprint_hazardous  	| kilogram      	|   1846
+		** No results for WasteFootprint_radioactive-kilogram
+	WasteFootprint_carbon dioxide 	| kilogram      	|    907
+	WasteFootprint_total      	| kilogram      	|  30014
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    308
+	WasteFootprint_radioactive 	| cubic meter   	|    308
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   4643
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: SSP5-Base-2050 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 725 material markets were found:
+                                                  name material_group location
+121                   market for aluminium alloy, AlLi      aluminium      GLO
+392                  market for aluminium alloy, AlMg3      aluminium      GLO
+62   market for aluminium alloy, metal matrix compo...      aluminium      GLO
+461  market for aluminium around steel bi-metal str...      aluminium      GLO
+10   market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+294                               market for zinc slag           zinc      GLO
+109                            market for zinc sulfide           zinc      GLO
+195                         market for zirconium oxide      zirconium      GLO
+161         market for zirconium sponge, nuclear-grade      zirconium      GLO
+720                 market for zirconium tetrachloride      zirconium      GLO
+
+[725 rows x 3 columns]
+
+* Extracting classifications...
+
+	Error for activity: market for vanadium pentoxide, classification: nan
+		Inferring from reference product base: "vanadium pentoxide", from reference product "vanadium pentoxide"
+	Error for activity: market for graphite, battery grade, classification: nan
+		Inferring from reference product base: "graphite", from reference product "graphite, battery grade"
+	Error for activity: market for lithium hydroxide, battery grade, classification: nan
+		Inferring from reference product base: "lithium hydroxide", from reference product "lithium hydroxide, battery grade"
+	Error for activity: market for lithium carbonate, battery grade, classification: nan
+		Inferring from reference product base: "lithium carbonate", from reference product "lithium carbonate, battery grade"
+	Error for activity: market for hard coal power plant, classification: nan
+		Inferring from reference product base: "hard coal pulverised power plant 500MW", from reference product "hard coal pulverised power plant 500MW"
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2050/material_activities.csv
+
+*** Searching for material exchanges in SSP5-Base-2050 ***
+
+*** Loading pickle to dataframe ***
+
+There were 15799 matching exchanges found in SSP5-Base-2050
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/SSP5-Base-2050/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  2123 : aluminium
+	    27 : antimony
+	    29 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  1168 : cement
+	     3 : cerium
+	   474 : chromium
+	  1756 : coal(black)
+	   542 : coal(brown)
+	   168 : cobalt
+	   110 : coke
+	  1237 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    29 : fluorspar
+	     1 : gadolinium
+	     4 : gallium
+	    11 : gold
+	    31 : graphite
+	    46 : helium
+	     1 : holmium
+	   646 : hydrogen
+	    16 : indium
+	    49 : latex
+	   237 : lead
+	    55 : lithium
+	   316 : magnesium
+	  2756 : natural gas
+	   438 : nickel
+	    36 : palladium
+	   511 : petroleum
+	   207 : phosphate rock
+	   171 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   590 : sand
+	     1 : scandium
+	     9 : selenium
+	   381 : silicon
+	    51 : silver
+	    28 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   127 : tin
+	   458 : titanium
+	     5 : tungsten
+	   140 : uranium
+	     1 : vanadium
+	    37 : vegetable oil
+	   673 : zinc
+	    11 : zirconium
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+** Pre-processing database (9/9): ecoinvent-3.9.1-cutoff**
+
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'ecoinvent-3.9.1-cutoff', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+====================================================================================================
+	 Starting T-reX for ecoinvent-3.9.1-cutoff
+====================================================================================================
+
+*** Starting ExplodeDatabase ***
+ExplodeDatabase uses wurst to open a bw2 database, explodes the exchanges for each process, and then returns a pickle file with a DataFrame list of all activities
+
+** db: ecoinvent-3.9.1-cutoff, in project: T-reX_macro will be processed
+
+** Opening the sausage...
+Getting activity data
+100%|█████████████████████████████████████████████████████████| 21238/21238 [00:00<00:00, 239604.24it/s]
+Adding exchange data to activities
+100%|████████████████████████████████████████████████████████| 674593/674593 [00:51<00:00, 13214.78it/s]
+Filling out exchange data
+100%|███████████████████████████████████████████████████████████| 21238/21238 [00:02<00:00, 7180.84it/s]
+
+*** Extracting activities from db...
+
+*** Exploding exchanges from activities...
+
+*** Pickling...
+
+ Pickle is: 51 MB
+
+*** The sausage <ecoinvent-3.9.1-cutoff> was exploded and pickled. Rejoice!
+
+*** Starting SearchWaste ***
+*** Loading pickle to dataframe ***
+*** Searching for waste exchanges ***
+	WasteFootprint_digestion  	| kilogram      	|      4
+	WasteFootprint_composting 	| kilogram      	|     14
+	WasteFootprint_open burning 	| kilogram      	|    535
+	WasteFootprint_incineration 	| kilogram      	|   1687
+	WasteFootprint_recycling  	| kilogram      	|     63
+	WasteFootprint_landfill   	| kilogram      	|   1430
+	WasteFootprint_hazardous  	| kilogram      	|   1498
+		** No results for WasteFootprint_radioactive-kilogram
+		** No results for WasteFootprint_carbon dioxide-kilogram
+	WasteFootprint_total      	| kilogram      	|  27830
+	WasteFootprint_digestion  	| cubic meter   	|      6
+		** No results for WasteFootprint_composting-cubic meter
+		** No results for WasteFootprint_open burning-cubic meter
+	WasteFootprint_incineration 	| cubic meter   	|      2
+		** No results for WasteFootprint_recycling-cubic meter
+	WasteFootprint_landfill   	| cubic meter   	|      2
+	WasteFootprint_hazardous  	| cubic meter   	|    295
+	WasteFootprint_radioactive 	| cubic meter   	|    295
+		** No results for WasteFootprint_carbon dioxide-cubic meter
+	WasteFootprint_total      	| cubic meter   	|   3838
+*** Finished searching for waste exchanges ***
+
+*** Starting SearchMaterial ***
+*** Loading pickle to dataframe ***
+
+*** Loading activities 
+from database: ecoinvent-3.9.1-cutoff 
+in project: T-reX_macro
+
+** Materials (58) | (activity, group)
+	('market for aluminium', 'aluminium')
+	('market for antimony', 'antimony')
+	('market for bauxite', 'bauxite')
+	('market for beryllium', 'beryllium')
+	('market for bismuth', 'bismuth')
+	('market for cadmium', 'cadmium')
+	('market for calcium borates', 'borates')
+	('market for cement', 'cement')
+	('market for cerium', 'cerium')
+	('market for chromium', 'chromium')
+	('market for cobalt', 'cobalt')
+	('market for coke', 'coke')
+	('market for copper', 'copper')
+	('market for dysprosium', 'dysprosium')
+	('market for erbium', 'erbium')
+	('market for europium', 'europium')
+	('market for ferroniobium,', 'niobium')
+	('market for fluorspar,', 'fluorspar')
+	('market for gadolinium', 'gadolinium')
+	('market for gallium', 'gallium')
+	('market for gold', 'gold')
+	('market for graphite', 'graphite')
+	('market for hafnium', 'hafnium')
+	('market for hard coal', 'coal(black)')
+	('market for helium', 'helium')
+	('market for holmium', 'holmium')
+	('market for hydrogen,', 'hydrogen')
+	('market for indium', 'indium')
+	('market for latex', 'latex')
+	('market for lead', 'lead')
+	('market for lignite', 'coal(brown)')
+	('market for lithium', 'lithium')
+	('market for magnesium', 'magnesium')
+	('market for natural gas,', 'natural gas')
+	('market for nickel', 'nickel')
+	('market for palladium', 'palladium')
+	('market for petroleum', 'petroleum')
+	('market for phosphate', 'phosphate rock')
+	('market for platinum', 'platinum')
+	('market for rare earth', 'rare earth')
+	('market for rhodium', 'rhodium')
+	('market for sand', 'sand')
+	('market for selenium', 'selenium')
+	('market for scandium', 'scandium')
+	('market for silicon', 'silicon')
+	('market for silver', 'silver')
+	('market for sodium borates', 'borates')
+	('market for strontium', 'strontium')
+	('market for tantalum', 'tantalum')
+	('market for tellurium', 'tellurium')
+	('market for tin', 'tin')
+	('market for titanium', 'titanium')
+	('market for uranium', 'uranium')
+	('market for tungsten', 'tungsten')
+	('market for vanadium', 'vanadium')
+	('market for vegetable oil,', 'vegetable oil')
+	('market for zinc', 'zinc')
+	('market for zirconium', 'zirconium')
+
+* 460 material markets were found:
+                                                  name material_group location
+49                    market for aluminium alloy, AlLi      aluminium      GLO
+204                  market for aluminium alloy, AlMg3      aluminium      GLO
+323  market for aluminium alloy, metal matrix compo...      aluminium      GLO
+228  market for aluminium around steel bi-metal str...      aluminium      GLO
+104  market for aluminium around steel bi-metal wir...      aluminium      GLO
+..                                                 ...            ...      ...
+90                                market for zinc slag           zinc      GLO
+199                            market for zinc sulfide           zinc      GLO
+425                         market for zirconium oxide      zirconium      GLO
+458         market for zirconium sponge, nuclear-grade      zirconium      GLO
+167                 market for zirconium tetrachloride      zirconium      GLO
+
+[460 rows x 3 columns]
+
+* Extracting classifications...
+
+
+Saved activities list to csv: 
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/ecoinvent-3.9.1-cutoff/material_activities.csv
+
+*** Searching for material exchanges in ecoinvent-3.9.1-cutoff ***
+
+*** Loading pickle to dataframe ***
+
+There were 18512 matching exchanges found in ecoinvent-3.9.1-cutoff
+
+Saved material exchanges to csv:
+/media/stew/s2-ssd-data/code/gh/T-reX/src/T-reX/data/SearchMaterialResults/ecoinvent-3.9.1-cutoff/material_exchanges.csv
+
+*** Grouping material exchanges by material group 
+
+	  1822 : aluminium
+	    26 : antimony
+	    24 : bauxite
+	     1 : beryllium
+	    15 : borates
+	    17 : cadmium
+	  2575 : cement
+	     2 : cerium
+	   410 : chromium
+	  1556 : coal(black)
+	   499 : coal(brown)
+	   166 : cobalt
+	    68 : coke
+	   915 : copper
+	     1 : dysprosium
+	     1 : erbium
+	     1 : europium
+	    22 : fluorspar
+	     1 : gadolinium
+	     3 : gallium
+	    10 : gold
+	    30 : graphite
+	    43 : helium
+	     1 : holmium
+	   377 : hydrogen
+	    13 : indium
+	    49 : latex
+	   184 : lead
+	    43 : lithium
+	   250 : magnesium
+	  5804 : natural gas
+	   342 : nickel
+	    22 : palladium
+	   503 : petroleum
+	   207 : phosphate rock
+	   164 : platinum
+	    37 : rare earth
+	    11 : rhodium
+	   553 : sand
+	     1 : scandium
+	     9 : selenium
+	   358 : silicon
+	    46 : silver
+	    27 : strontium
+	     3 : tantalum
+	     2 : tellurium
+	   103 : tin
+	   454 : titanium
+	     5 : tungsten
+	   136 : uranium
+	    34 : vegetable oil
+	   557 : zinc
+	     9 : zirconium
+
+--------------------------------------------------------------------------------
+
+
+*** Writing custom database file: biosphere_T-reX
+
+
+
+*** Appending to existing custom database file: biosphere_T-reX
+
+	 Appending: MaterialFootprint_aluminium
+	 Appending: MaterialFootprint_antimony
+	 Appending: MaterialFootprint_bauxite
+	 Appending: MaterialFootprint_beryllium
+	 Appending: MaterialFootprint_borates
+	 Appending: MaterialFootprint_cadmium
+	 Appending: MaterialFootprint_cement
+	 Appending: MaterialFootprint_cerium
+	 Appending: MaterialFootprint_chromium
+	 Appending: MaterialFootprint_coal(black)
+	 Appending: MaterialFootprint_coal(brown)
+	 Appending: MaterialFootprint_cobalt
+	 Appending: MaterialFootprint_coke
+	 Appending: MaterialFootprint_copper
+	 Appending: MaterialFootprint_dysprosium
+	 Appending: MaterialFootprint_erbium
+	 Appending: MaterialFootprint_europium
+	 Appending: MaterialFootprint_fluorspar
+	 Appending: MaterialFootprint_gadolinium
+	 Appending: MaterialFootprint_gallium
+	 Appending: MaterialFootprint_gold
+	 Appending: MaterialFootprint_graphite
+	 Appending: MaterialFootprint_helium
+	 Appending: MaterialFootprint_holmium
+	 Appending: MaterialFootprint_hydrogen
+	 Appending: MaterialFootprint_indium
+	 Appending: MaterialFootprint_latex
+	 Appending: MaterialFootprint_lead
+	 Appending: MaterialFootprint_lithium
+	 Appending: MaterialFootprint_magnesium
+	 Appending: MaterialFootprint_natural gas
+	 Appending: MaterialFootprint_nickel
+	 Appending: MaterialFootprint_palladium
+	 Appending: MaterialFootprint_petroleum
+	 Appending: MaterialFootprint_phosphate rock
+	 Appending: MaterialFootprint_platinum
+	 Appending: MaterialFootprint_rare earth
+	 Appending: MaterialFootprint_rhodium
+	 Appending: MaterialFootprint_sand
+	 Appending: MaterialFootprint_scandium
+	 Appending: MaterialFootprint_selenium
+	 Appending: MaterialFootprint_silicon
+	 Appending: MaterialFootprint_silver
+	 Appending: MaterialFootprint_strontium
+	 Appending: MaterialFootprint_tantalum
+	 Appending: MaterialFootprint_tellurium
+	 Appending: MaterialFootprint_tin
+	 Appending: MaterialFootprint_titanium
+	 Appending: MaterialFootprint_tungsten
+	 Appending: MaterialFootprint_uranium
+	 Appending: MaterialFootprint_vanadium
+	 Appending: MaterialFootprint_vegetable oil
+	 Appending: MaterialFootprint_zinc
+	 Appending: MaterialFootprint_zirconium
+	 Appending: WasteFootprint_carbondioxide-kilogram
+	 Appending: WasteFootprint_composting-kilogram
+	 Appending: WasteFootprint_digestion-cubicmeter
+	 Appending: WasteFootprint_digestion-kilogram
+	 Appending: WasteFootprint_hazardous-cubicmeter
+	 Appending: WasteFootprint_hazardous-kilogram
+	 Appending: WasteFootprint_incineration-cubicmeter
+	 Appending: WasteFootprint_incineration-kilogram
+	 Appending: WasteFootprint_landfill-cubicmeter
+	 Appending: WasteFootprint_landfill-kilogram
+	 Appending: WasteFootprint_openburning-kilogram
+	 Appending: WasteFootprint_radioactive-cubicmeter
+	 Appending: WasteFootprint_recycling-kilogram
+	 Appending: WasteFootprint_total-cubicmeter
+	 Appending: WasteFootprint_total-kilogram
+
+ ** Added 69 entries to the xlsx for the custom waste and material database:
+	biosphere_T-reX
+
+** Importing the custom database biosphere_T-reX**
+	 to the brightway2 project: T-reX_macro
+
+** Running BW2io ExcelImporter **
+
+Extracted 1 worksheets in 0.02 seconds
+Applying strategy: csv_restore_tuples
+Applying strategy: csv_restore_booleans
+Applying strategy: csv_numerize
+Applying strategy: csv_drop_unknown
+Applying strategy: csv_add_missing_exchanges_section
+Applying strategy: normalize_units
+Applying strategy: normalize_biosphere_categories
+Applying strategy: normalize_biosphere_names
+Applying strategy: strip_biosphere_exc_locations
+Applying strategy: set_code_by_activity_hash
+Applying strategy: link_iterable_by_fields
+Applying strategy: assign_only_product_as_production
+Applying strategy: link_technosphere_by_activity_hash
+Applying strategy: drop_falsey_uncertainty_fields_but_keep_zeros
+Applying strategy: convert_uncertainty_types_to_integers
+Applying strategy: convert_activity_parameters_to_list
+Applied 16 strategies in 6.83 seconds
+69 datasets
+0 exchanges
+0 unlinked exchanges
+  
+Writing activities to SQLite3 database:
+0% [##############################] 100% | ETA: 00:00:00
+Total time elapsed: 00:00:00
+Title: Writing activities to SQLite3 database:
+  Started: 08/26/2025 20:26:44
+  Finished: 08/26/2025 20:26:44
+  Total time elapsed: 00:00:00
+  CPU %: 0.00
+  Memory %: 7.09
+Created database: biosphere_T-reX
+
+** Database metadata **
+format: Excel
+depends: []
+backend: sqlite
+number: 69
+modified: 2025-08-26T20:26:43.855204
+searchable: True
+processed: 2025-08-26T20:26:45.510175
+
+*** Great success! ***
+
+*** Running AddMethods() ***
+
+	 ('T-reX', 'Demand: Aluminium', 'Aluminium')
+	 ('T-reX', 'Demand: Antimony', 'Antimony')
+	 ('T-reX', 'Demand: Bauxite', 'Bauxite')
+	 ('T-reX', 'Demand: Beryllium', 'Beryllium')
+	 ('T-reX', 'Demand: Borates', 'Borates')
+	 ('T-reX', 'Demand: Cadmium', 'Cadmium')
+	 ('T-reX', 'Demand: Cement', 'Cement')
+	 ('T-reX', 'Demand: Cerium', 'Cerium')
+	 ('T-reX', 'Demand: Chromium', 'Chromium')
+	 ('T-reX', 'Demand: Coal(black)', 'Coal(black)')
+	 ('T-reX', 'Demand: Coal(brown)', 'Coal(brown)')
+	 ('T-reX', 'Demand: Cobalt', 'Cobalt')
+	 ('T-reX', 'Demand: Coke', 'Coke')
+	 ('T-reX', 'Demand: Copper', 'Copper')
+	 ('T-reX', 'Demand: Dysprosium', 'Dysprosium')
+	 ('T-reX', 'Demand: Erbium', 'Erbium')
+	 ('T-reX', 'Demand: Europium', 'Europium')
+	 ('T-reX', 'Demand: Fluorspar', 'Fluorspar')
+	 ('T-reX', 'Demand: Gadolinium', 'Gadolinium')
+	 ('T-reX', 'Demand: Gallium', 'Gallium')
+	 ('T-reX', 'Demand: Gold', 'Gold')
+	 ('T-reX', 'Demand: Graphite', 'Graphite')
+	 ('T-reX', 'Demand: Helium', 'Helium')
+	 ('T-reX', 'Demand: Holmium', 'Holmium')
+	 ('T-reX', 'Demand: Hydrogen', 'Hydrogen')
+	 ('T-reX', 'Demand: Indium', 'Indium')
+	 ('T-reX', 'Demand: Latex', 'Latex')
+	 ('T-reX', 'Demand: Lead', 'Lead')
+	 ('T-reX', 'Demand: Lithium', 'Lithium')
+	 ('T-reX', 'Demand: Magnesium', 'Magnesium')
+	 ('T-reX', 'Demand: Natural gas', 'Natural gas')
+	 ('T-reX', 'Demand: Nickel', 'Nickel')
+	 ('T-reX', 'Demand: Palladium', 'Palladium')
+	 ('T-reX', 'Demand: Petroleum', 'Petroleum')
+	 ('T-reX', 'Demand: Phosphate rock', 'Phosphate rock')
+	 ('T-reX', 'Demand: Platinum', 'Platinum')
+	 ('T-reX', 'Demand: Rare earth', 'Rare earth')
+	 ('T-reX', 'Demand: Rhodium', 'Rhodium')
+	 ('T-reX', 'Demand: Sand', 'Sand')
+	 ('T-reX', 'Demand: Scandium', 'Scandium')
+	 ('T-reX', 'Demand: Selenium', 'Selenium')
+	 ('T-reX', 'Demand: Silicon', 'Silicon')
+	 ('T-reX', 'Demand: Silver', 'Silver')
+	 ('T-reX', 'Demand: Strontium', 'Strontium')
+	 ('T-reX', 'Demand: Tantalum', 'Tantalum')
+	 ('T-reX', 'Demand: Tellurium', 'Tellurium')
+	 ('T-reX', 'Demand: Tin', 'Tin')
+	 ('T-reX', 'Demand: Titanium', 'Titanium')
+	 ('T-reX', 'Demand: Tungsten', 'Tungsten')
+	 ('T-reX', 'Demand: Uranium', 'Uranium')
+	 ('T-reX', 'Demand: Vanadium', 'Vanadium')
+	 ('T-reX', 'Demand: Vegetable oil', 'Vegetable oil')
+	 ('T-reX', 'Demand: Zinc', 'Zinc')
+	 ('T-reX', 'Demand: Zirconium', 'Zirconium')
+	 ('T-reX', 'Waste: Carbondioxide combined', 'Carbondioxide (kg)')
+	 ('T-reX', 'Waste: Composting combined', 'Composting (kg)')
+	 ('T-reX', 'Waste: Digestion combined', 'Digestion (m3)')
+	 ('T-reX', 'Waste: Digestion combined', 'Digestion (kg)')
+	 ('T-reX', 'Waste: Hazardous combined', 'Hazardous (m3)')
+	 ('T-reX', 'Waste: Hazardous combined', 'Hazardous (kg)')
+	 ('T-reX', 'Waste: Incineration combined', 'Incineration (m3)')
+	 ('T-reX', 'Waste: Incineration combined', 'Incineration (kg)')
+	 ('T-reX', 'Waste: Landfill combined', 'Landfill (m3)')
+	 ('T-reX', 'Waste: Landfill combined', 'Landfill (kg)')
+	 ('T-reX', 'Waste: Openburning combined', 'Openburning (kg)')
+	 ('T-reX', 'Waste: Radioactive combined', 'Radioactive (m3)')
+	 ('T-reX', 'Waste: Recycling combined', 'Recycling (kg)')
+	 ('T-reX', 'Waste: Total combined', 'Total (m3)')
+	 ('T-reX', 'Waste: Total combined', 'Total (kg)')
+
+*** Added 69  new methods ***
+
+    --------------------------------------------------------------------------------
+    *** Preprocessing completed ***
+
+    	 Total databases:          9
+    	 Successfully processed:   9
+    	 Duration:                 0:17:18 (h:m:s)
+    --------------------------------------------------------------------------------
+    
+    
+
+--------------------------------------------------------------------------------
+
+** Processing database (1/9): SSP1-PkBudg500-2020**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2020', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP1-PkBudg500-2020 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progre
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progre
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progre
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progre
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progre
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progre
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progre
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progre
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progre
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progre
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progre
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progre
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progre
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progre
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progre
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progre
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progre
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progre
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progre
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progre
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progre
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progre
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progre
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progre
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progre
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progre
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progre
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progre
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progre
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progre
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progre
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progre
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progre
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progre
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progre
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progre
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progre
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progre
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progre
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progre
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progre
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progre
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progre
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progre
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progre
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progre
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progre
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progre
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progre
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progre
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progre
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progre
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progre
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progre
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progre
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progre
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progre
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progre
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progre
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progre
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progre
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progre
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progre
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progre
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progre
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progre
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP1-PkBudg500-2020 in 0:21:22 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP1-PkBudg500-2020 in project T-reX_macro **
+
+	Score: -3.40e-08 
+	Method: Composting (kg) 
+	Activity: shredding and sorting, installation, for LiS battery 
+	Database: SSP1-PkBudg500-2020
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP1-PkBudg500-2020 ***
+			Duration: 0:21:47 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (2/9): SSP1-PkBudg500-2030**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2030', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP1-PkBudg500-2030 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progre
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progre
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progre
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progre
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progre
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progre
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progre
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progre
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progre
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progre
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progre
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progre
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progre
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progre
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progre
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progre
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progre
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progre
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progre
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progre
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progre
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progre
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progre
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progre
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progre
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progre
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progre
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progre
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progre
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progre
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progre
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progre
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progre
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progre
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progre
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progre
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progre
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progre
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progre
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progre
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progre
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progre
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progre
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progre
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progre
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progre
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progre
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progre
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progre
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progre
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progre
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progre
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progre
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progre
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progre
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progre
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progre
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progre
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progre
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progre
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progre
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progre
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progre
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progre
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progre
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progre
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progre
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP1-PkBudg500-2030 in 0:20:22 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP1-PkBudg500-2030 in project T-reX_macro **
+
+	Score: 4.45e-07 
+	Method: Indium 
+	Activity: carbon dioxide storage at synthetic natural gas plant, post, 400km pipeline, storage 3000m 
+	Database: SSP1-PkBudg500-2030
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP1-PkBudg500-2030 ***
+			Duration: 0:20:50 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (3/9): SSP1-PkBudg500-2040**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2040', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP1-PkBudg500-2040 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  212
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    2
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    2
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  116
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   47
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  175
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   54
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   16
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   11
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  123
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    1
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    3
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    4
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   64
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    1
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    4
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   23
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    5
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   31
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  275
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   43
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    3
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   51
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   20
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   17
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    3
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   59
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   38
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    5
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   12
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   45
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   14
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    3
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   67
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    1
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:  102
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    1
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   30
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  184
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  231
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  168
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   53
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   30
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    8
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  464
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 3001
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP1-PkBudg500-2040 in 0:19:05 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP1-PkBudg500-2040 in project T-reX_macro **
+
+	Score: 3.00e-05 
+	Method: Tantalum 
+	Activity: hydrogen supply, hydrogen, from coal, by ship, as liquid, over 2000 km 
+	Database: SSP1-PkBudg500-2040
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP1-PkBudg500-2040 ***
+			Duration: 0:19:43 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (4/9): SSP1-PkBudg500-2050**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP1-PkBudg500-2050', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP1-PkBudg500-2050 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  212
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    2
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    2
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  116
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   47
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  175
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   54
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   16
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   11
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  123
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    1
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    3
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    4
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   64
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    1
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    4
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   23
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    5
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   31
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  275
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   43
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    3
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   51
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   20
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   17
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    3
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   59
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   38
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    5
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   12
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   45
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   14
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    3
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   67
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    1
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:  102
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    1
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   30
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  184
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  231
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  168
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   53
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   30
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    8
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  464
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 3001
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP1-PkBudg500-2050 in 0:19:09 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP1-PkBudg500-2050 in project T-reX_macro **
+
+	Score: 0.00e+00 
+	Method: Uranium 
+	Activity: treatment of wastewater from soft fibreboard production, wastewater treatment 
+	Database: SSP1-PkBudg500-2050
+
+	Score: 8.47e-06 
+	Method: Lead 
+	Activity: electricity production, natural gas, combined cycle power plant 
+	Database: SSP1-PkBudg500-2050
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP1-PkBudg500-2050 ***
+			Duration: 0:19:50 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (5/9): SSP5-Base-2020**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2020', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP5-Base-2020 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  212
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    2
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    2
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  116
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   47
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  175
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   54
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   16
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   11
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  123
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    1
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    3
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    4
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   64
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    1
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    4
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   23
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    5
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   31
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  275
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   43
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    3
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   51
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   20
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   17
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    3
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   59
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   38
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    5
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   12
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   45
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   14
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    3
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   67
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    1
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:   90
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    1
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   30
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  184
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  231
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  168
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   53
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   30
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    8
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  464
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 3001
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP5-Base-2020 in 0:20:11 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP5-Base-2020 in project T-reX_macro **
+
+	Score: 7.23e-03 
+	Method: Coal(brown) 
+	Activity: ethanol production, via fermentation, from forest residue, energy allocation 
+	Database: SSP5-Base-2020
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP5-Base-2020 ***
+			Duration: 0:20:54 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (6/9): SSP5-Base-2030**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2030', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP5-Base-2030 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  212
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    2
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    2
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    1
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  116
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   47
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  175
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   54
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   16
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   11
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  123
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    2
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    1
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    3
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    4
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   64
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    1
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    4
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   23
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    5
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   31
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  275
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   438 of 438   | El
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    36 of 36    | El
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   511 of 511   | El
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   207 of 207   | El
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   171 of 171   | Elapsed: 00:03 | Remaining: 00:00
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   590 of 590   | Elapsed: 00:11 | Remaining: 00:00
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     9 of 9     | Elapsed: 00:00 | Remaining: 00:00
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   381 of 381   | Elapsed: 00:07 | Remaining: 00:00
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    51 of 51    | Elapsed: 00:01 | Remaining: 00:00
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    28 of 28    | Elapsed: 00:00 | Remaining: 00:00
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   127 of 127   | Elapsed: 00:02 | Remaining: 00:00
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   458 of 458   | Elapsed: 00:09 | Remaining: 00:00
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     5 of 5     | Elapsed: 00:00 | Remaining: 00:00
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   140 of 140   | Elapsed: 00:02 | Remaining: 00:00
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   673 of 673   | Elapsed: 00:13 | Remaining: 00:00
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:   907 of 907   | Elapsed: 00:18 | Remaining: 00:00
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    14 of 14    | Elapsed: 00:00 | Remaining: 00:00
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     6 of 6     | Elapsed: 00:00 | Remaining: 00:00
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  1846 of 1846  | Elapsed: 00:37 | Remaining: 00:00
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  2314 of 2314  | Elapsed: 00:47 | Remaining: 00:00
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  1680 of 1680  | Elapsed: 00:33 | Remaining: 00:00
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   535 of 535   | Elapsed: 00:10 | Remaining: 00:00
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    83 of 83    | Elapsed: 00:01 | Remaining: 00:00
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  4643 of 4643  | Elapsed: 01:34 | Remaining: 00:00
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 30014 of 30014 | Elapsed: 10:08 | Remaining: 00:00
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP5-Base-2030 in 0:18:50 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP5-Base-2030 in project T-reX_macro **
+
+	Score: 5.83e-06 
+	Method: Rare earth 
+	Activity: ethanol production, via fermentation, from eucalyptus, with carbon capture and storage 
+	Database: SSP5-Base-2030
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP5-Base-2030 ***
+			Duration: 0:19:30 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (7/9): SSP5-Base-2040**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2040', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP5-Base-2040 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  2123 of 2123  | Elapsed: 00:44 | Remaining: 00:00
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    27 of 27    | Elapsed: 00:00 | Remaining: 00:00
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    29 of 29    | Elapsed: 00:00 | Remaining: 00:00
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    15 of 15    | Elapsed: 00:00 | Remaining: 00:00
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    17 of 17    | Elapsed: 00:00 | Remaining: 00:00
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  1168 of 1168  | Elapsed: 00:23 | Remaining: 00:00
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   474 of 474   | Elapsed: 00:09 | Remaining: 00:00
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  1756 of 1756  | Elapsed: 00:35 | Remaining: 00:00
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   542 of 542   | Elapsed: 00:11 | Remaining: 00:00
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   168 of 168   | Elapsed: 00:03 | Remaining: 00:00
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   110 of 110   | Elapsed: 00:02 | Remaining: 00:00
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  1237 of 1237  | Elapsed: 00:25 | Remaining: 00:00
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    29 of 29    | Elapsed: 00:00 | Remaining: 00:00
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    31 of 31    | Elapsed: 00:00 | Remaining: 00:00
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    46 of 46    | Elapsed: 00:00 | Remaining: 00:00
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   646 of 646   | Elapsed: 00:13 | Remaining: 00:00
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    16 of 16    | Elapsed: 00:00 | Remaining: 00:00
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    49 of 49    | Elapsed: 00:01 | Remaining: 00:00
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   237 of 237   | Elapsed: 00:04 | Remaining: 00:00
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    55 of 55    | Elapsed: 00:01 | Remaining: 00:00
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   316 of 316   | Elapsed: 00:06 | Remaining: 00:00
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  2756 of 2756  | Elapsed: 00:56 | Remaining: 00:00
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   438 of 438   | Elapsed: 00:08 | Remaining: 00:00
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    36 of 36    | Elapsed: 00:00 | Remaining: 00:00
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   511 of 511   | Elapsed: 00:10 | Remaining: 00:00
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   207 of 207   | Elapsed: 00:04 | Remaining: 00:00
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   171 of 171   | Elapsed: 00:03 | Remaining: 00:00
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   590 of 590   | Elapsed: 00:11 | Remaining: 00:00
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     9 of 9     | Elapsed: 00:00 | Remaining: 00:00
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   381 of 381   | Elapsed: 00:07 | Remaining: 00:00
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    51 of 51    | Elapsed: 00:01 | Remaining: 00:00
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    28 of 28    | Elapsed: 00:00 | Remaining: 00:00
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   127 of 127   | Elapsed: 00:02 | Remaining: 00:00
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   458 of 458   | Elapsed: 00:09 | Remaining: 00:00
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     5 of 5     | Elapsed: 00:00 | Remaining: 00:00
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   140 of 140   | Elapsed: 00:02 | Remaining: 00:00
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   673 of 673   | Elapsed: 00:13 | Remaining: 00:00
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:   907 of 907   | Elapsed: 00:18 | Remaining: 00:00
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    14 of 14    | Elapsed: 00:00 | Remaining: 00:00
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     6 of 6     | Elapsed: 00:00 | Remaining: 00:00
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  1846 of 1846  | Elapsed: 00:37 | Remaining: 00:00
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  2314 of 2314  | Elapsed: 00:45 | Remaining: 00:00
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  1680 of 1680  | Elapsed: 00:33 | Remaining: 00:00
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   535 of 535   | Elapsed: 00:10 | Remaining: 00:00
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    83 of 83    | Elapsed: 00:01 | Remaining: 00:00
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  4643 of 4643  | Elapsed: 01:35 | Remaining: 00:00
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 30014 of 30014 | Elapsed: 10:09 | Remaining: 00:00
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP5-Base-2040 in 0:19:50 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP5-Base-2040 in project T-reX_macro **
+
+	Score: 3.65e-09 
+	Method: Zirconium 
+	Activity: geological hydrogen storage 
+	Database: SSP5-Base-2040
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP5-Base-2040 ***
+			Duration: 0:20:31 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (8/9): SSP5-Base-2050**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'SSP5-Base-2050', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for SSP5-Base-2050 ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/69 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  2123 of 2123  | Elapsed: 00:20 | Remaining: 00:00
+ -  2/69 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    27 of 27    | Elapsed: 00:00 | Remaining: 00:00
+ -  3/69 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    29 of 29    | Elapsed: 00:00 | Remaining: 00:00
+ -  4/69 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ -  5/69 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    15 of 15    | Elapsed: 00:00 | Remaining: 00:00
+ -  6/69 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    17 of 17    | Elapsed: 00:00 | Remaining: 00:00
+ -  7/69 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  1168 of 1168  | Elapsed: 00:10 | Remaining: 00:00
+ -  8/69 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ -  9/69 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   474 of 474   | Elapsed: 00:03 | Remaining: 00:00
+ - 10/69 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  1756 of 1756  | Elapsed: 00:14 | Remaining: 00:00
+ - 11/69 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   542 of 542   | Elapsed: 00:10 | Remaining: 00:00
+ - 12/69 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   168 of 168   | Elapsed: 00:03 | Remaining: 00:00
+ - 13/69 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:   110 of 110   | Elapsed: 00:02 | Remaining: 00:00
+ - 14/69 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:  1237 of 1237  | Elapsed: 00:24 | Remaining: 00:00
+ - 15/69 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 16/69 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 17/69 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 18/69 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    29 of 29    | Elapsed: 00:00 | Remaining: 00:00
+ - 19/69 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 20/69 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 21/69 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 22/69 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    31 of 31    | Elapsed: 00:00 | Remaining: 00:00
+ - 23/69 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    46 of 46    | Elapsed: 00:00 | Remaining: 00:00
+ - 24/69 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 25/69 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   646 of 646   | Elapsed: 00:12 | Remaining: 00:00
+ - 26/69 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    16 of 16    | Elapsed: 00:00 | Remaining: 00:00
+ - 27/69 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    49 of 49    | Elapsed: 00:00 | Remaining: 00:00
+ - 28/69 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   237 of 237   | Elapsed: 00:04 | Remaining: 00:00
+ - 29/69 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    55 of 55    | Elapsed: 00:01 | Remaining: 00:00
+ - 30/69 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   316 of 316   | Elapsed: 00:06 | Remaining: 00:00
+ - 31/69 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  2756 of 2756  | Elapsed: 00:58 | Remaining: 00:00
+ - 32/69 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   438 of 438   | Elapsed: 00:08 | Remaining: 00:00
+ - 33/69 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    36 of 36    | Elapsed: 00:00 | Remaining: 00:00
+ - 34/69 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   511 of 511   | Elapsed: 00:10 | Remaining: 00:00
+ - 35/69 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   207 of 207   | Elapsed: 00:04 | Remaining: 00:00
+ - 36/69 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   171 of 171   | Elapsed: 00:03 | Remaining: 00:00
+ - 37/69 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 38/69 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 39/69 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   590 of 590   | Elapsed: 00:11 | Remaining: 00:00
+ - 40/69 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 41/69 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     9 of 9     | Elapsed: 00:00 | Remaining: 00:00
+ - 42/69 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   381 of 381   | Elapsed: 00:07 | Remaining: 00:00
+ - 43/69 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    51 of 51    | Elapsed: 00:01 | Remaining: 00:00
+ - 44/69 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    28 of 28    | Elapsed: 00:00 | Remaining: 00:00
+ - 45/69 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ - 46/69 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 47/69 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   127 of 127   | Elapsed: 00:02 | Remaining: 00:00
+ - 48/69 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   458 of 458   | Elapsed: 00:09 | Remaining: 00:00
+ - 49/69 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     5 of 5     | Elapsed: 00:00 | Remaining: 00:00
+ - 50/69 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   140 of 140   | Elapsed: 00:02 | Remaining: 00:00
+ - 51/69 : MaterialFootprint_vanadium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 52/69 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 53/69 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   673 of 673   | Elapsed: 00:13 | Remaining: 00:00
+ - 54/69 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 55/69 : WasteFootprint_carbondioxide-kilogram      | ██████████████████████████████ | 100.0% | Progress:   907 of 907   | Elapsed: 00:18 | Remaining: 00:00
+ - 56/69 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    14 of 14    | Elapsed: 00:00 | Remaining: 00:00
+ - 57/69 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     6 of 6     | Elapsed: 00:00 | Remaining: 00:00
+ - 58/69 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 59/69 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 60/69 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  1846 of 1846  | Elapsed: 00:37 | Remaining: 00:00
+ - 61/69 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 62/69 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  2314 of 2314  | Elapsed: 00:47 | Remaining: 00:00
+ - 63/69 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 64/69 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  1680 of 1680  | Elapsed: 00:33 | Remaining: 00:00
+ - 65/69 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   535 of 535   | Elapsed: 00:10 | Remaining: 00:00
+ - 66/69 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   308 of 308   | Elapsed: 00:06 | Remaining: 00:00
+ - 67/69 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    83 of 83    | Elapsed: 00:01 | Remaining: 00:00
+ - 68/69 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  4643 of 4643  | Elapsed: 01:33 | Remaining: 00:00
+ - 69/69 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 30014 of 30014 | Elapsed: 10:04 | Remaining: 00:00
+****************************************************************************************************
+
+*** ExchangeEditor() completed for SSP5-Base-2050 in 0:18:38 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database SSP5-Base-2050 in project T-reX_macro **
+
+	Score: -3.02e-08 
+	Method: Cobalt 
+	Activity: treatment of waste gypsum plasterboard, collection for final disposal 
+	Database: SSP5-Base-2050
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for SSP5-Base-2050 ***
+			Duration: 0:19:18 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+** Processing database (9/9): ecoinvent-3.9.1-cutoff**
+Arguments:
+{'project_base': 'default-3.9.1-premise-sep', 'project_T_reX': 'T-reX_macro', 'db_name': 'ecoinvent-3.9.1-cutoff', 'db_T_reX_name': 'biosphere_T-reX', 'db_biosphere_name': 'biosphere3'}
+
+
+*** ExchangeEditor() is running for ecoinvent-3.9.1-cutoff ***
+
+* Appending waste and material exchanges in biosphere_T-reX
+ 
+ -  1/67 : MaterialFootprint_aluminium                | ██████████████████████████████ | 100.0% | Progress:  1822 of 1822  | Elapsed: 00:16 | Remaining: 00:00
+ -  2/67 : MaterialFootprint_antimony                 | ██████████████████████████████ | 100.0% | Progress:    26 of 26    | Elapsed: 00:00 | Remaining: 00:00
+ -  3/67 : MaterialFootprint_bauxite                  | ██████████████████████████████ | 100.0% | Progress:    24 of 24    | Elapsed: 00:00 | Remaining: 00:00
+ -  4/67 : MaterialFootprint_beryllium                | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ -  5/67 : MaterialFootprint_borates                  | ██████████████████████████████ | 100.0% | Progress:    15 of 15    | Elapsed: 00:00 | Remaining: 00:00
+ -  6/67 : MaterialFootprint_cadmium                  | ██████████████████████████████ | 100.0% | Progress:    17 of 17    | Elapsed: 00:00 | Remaining: 00:00
+ -  7/67 : MaterialFootprint_cement                   | ██████████████████████████████ | 100.0% | Progress:  2575 of 2575  | Elapsed: 00:21 | Remaining: 00:00
+ -  8/67 : MaterialFootprint_cerium                   | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ -  9/67 : MaterialFootprint_chromium                 | ██████████████████████████████ | 100.0% | Progress:   410 of 410   | Elapsed: 00:03 | Remaining: 00:00
+ - 10/67 : MaterialFootprint_coal(black)              | ██████████████████████████████ | 100.0% | Progress:  1556 of 1556  | Elapsed: 00:20 | Remaining: 00:00
+ - 11/67 : MaterialFootprint_coal(brown)              | ██████████████████████████████ | 100.0% | Progress:   499 of 499   | Elapsed: 00:10 | Remaining: 00:00
+ - 12/67 : MaterialFootprint_cobalt                   | ██████████████████████████████ | 100.0% | Progress:   166 of 166   | Elapsed: 00:03 | Remaining: 00:00
+ - 13/67 : MaterialFootprint_coke                     | ██████████████████████████████ | 100.0% | Progress:    68 of 68    | Elapsed: 00:01 | Remaining: 00:00
+ - 14/67 : MaterialFootprint_copper                   | ██████████████████████████████ | 100.0% | Progress:   915 of 915   | Elapsed: 00:18 | Remaining: 00:00
+ - 15/67 : MaterialFootprint_dysprosium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 16/67 : MaterialFootprint_erbium                   | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 17/67 : MaterialFootprint_europium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 18/67 : MaterialFootprint_fluorspar                | ██████████████████████████████ | 100.0% | Progress:    22 of 22    | Elapsed: 00:00 | Remaining: 00:00
+ - 19/67 : MaterialFootprint_gadolinium               | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 20/67 : MaterialFootprint_gallium                  | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ - 21/67 : MaterialFootprint_gold                     | ██████████████████████████████ | 100.0% | Progress:    10 of 10    | Elapsed: 00:00 | Remaining: 00:00
+ - 22/67 : MaterialFootprint_graphite                 | ██████████████████████████████ | 100.0% | Progress:    30 of 30    | Elapsed: 00:00 | Remaining: 00:00
+ - 23/67 : MaterialFootprint_helium                   | ██████████████████████████████ | 100.0% | Progress:    43 of 43    | Elapsed: 00:00 | Remaining: 00:00
+ - 24/67 : MaterialFootprint_holmium                  | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 25/67 : MaterialFootprint_hydrogen                 | ██████████████████████████████ | 100.0% | Progress:   377 of 377   | Elapsed: 00:07 | Remaining: 00:00
+ - 26/67 : MaterialFootprint_indium                   | ██████████████████████████████ | 100.0% | Progress:    13 of 13    | Elapsed: 00:00 | Remaining: 00:00
+ - 27/67 : MaterialFootprint_latex                    | ██████████████████████████████ | 100.0% | Progress:    49 of 49    | Elapsed: 00:01 | Remaining: 00:00
+ - 28/67 : MaterialFootprint_lead                     | ██████████████████████████████ | 100.0% | Progress:   184 of 184   | Elapsed: 00:03 | Remaining: 00:00
+ - 29/67 : MaterialFootprint_lithium                  | ██████████████████████████████ | 100.0% | Progress:    43 of 43    | Elapsed: 00:00 | Remaining: 00:00
+ - 30/67 : MaterialFootprint_magnesium                | ██████████████████████████████ | 100.0% | Progress:   250 of 250   | Elapsed: 00:05 | Remaining: 00:00
+ - 31/67 : MaterialFootprint_natural gas              | ██████████████████████████████ | 100.0% | Progress:  5804 of 5804  | Elapsed: 01:57 | Remaining: 00:00
+ - 32/67 : MaterialFootprint_nickel                   | ██████████████████████████████ | 100.0% | Progress:   342 of 342   | Elapsed: 00:07 | Remaining: 00:00
+ - 33/67 : MaterialFootprint_palladium                | ██████████████████████████████ | 100.0% | Progress:    22 of 22    | Elapsed: 00:00 | Remaining: 00:00
+ - 34/67 : MaterialFootprint_petroleum                | ██████████████████████████████ | 100.0% | Progress:   503 of 503   | Elapsed: 00:10 | Remaining: 00:00
+ - 35/67 : MaterialFootprint_phosphate rock           | ██████████████████████████████ | 100.0% | Progress:   207 of 207   | Elapsed: 00:04 | Remaining: 00:00
+ - 36/67 : MaterialFootprint_platinum                 | ██████████████████████████████ | 100.0% | Progress:   164 of 164   | Elapsed: 00:03 | Remaining: 00:00
+ - 37/67 : MaterialFootprint_rare earth               | ██████████████████████████████ | 100.0% | Progress:    37 of 37    | Elapsed: 00:00 | Remaining: 00:00
+ - 38/67 : MaterialFootprint_rhodium                  | ██████████████████████████████ | 100.0% | Progress:    11 of 11    | Elapsed: 00:00 | Remaining: 00:00
+ - 39/67 : MaterialFootprint_sand                     | ██████████████████████████████ | 100.0% | Progress:   553 of 553   | Elapsed: 00:11 | Remaining: 00:00
+ - 40/67 : MaterialFootprint_scandium                 | ██████████████████████████████ | 100.0% | Progress:     1 of 1     | Elapsed: 00:00 | Remaining: 00:00
+ - 41/67 : MaterialFootprint_selenium                 | ██████████████████████████████ | 100.0% | Progress:     9 of 9     | Elapsed: 00:00 | Remaining: 00:00
+ - 42/67 : MaterialFootprint_silicon                  | ██████████████████████████████ | 100.0% | Progress:   358 of 358   | Elapsed: 00:07 | Remaining: 00:00
+ - 43/67 : MaterialFootprint_silver                   | ██████████████████████████████ | 100.0% | Progress:    46 of 46    | Elapsed: 00:00 | Remaining: 00:00
+ - 44/67 : MaterialFootprint_strontium                | ██████████████████████████████ | 100.0% | Progress:    27 of 27    | Elapsed: 00:00 | Remaining: 00:00
+ - 45/67 : MaterialFootprint_tantalum                 | ██████████████████████████████ | 100.0% | Progress:     3 of 3     | Elapsed: 00:00 | Remaining: 00:00
+ - 46/67 : MaterialFootprint_tellurium                | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 47/67 : MaterialFootprint_tin                      | ██████████████████████████████ | 100.0% | Progress:   103 of 103   | Elapsed: 00:02 | Remaining: 00:00
+ - 48/67 : MaterialFootprint_titanium                 | ██████████████████████████████ | 100.0% | Progress:   454 of 454   | Elapsed: 00:09 | Remaining: 00:00
+ - 49/67 : MaterialFootprint_tungsten                 | ██████████████████████████████ | 100.0% | Progress:     5 of 5     | Elapsed: 00:00 | Remaining: 00:00
+ - 50/67 : MaterialFootprint_uranium                  | ██████████████████████████████ | 100.0% | Progress:   136 of 136   | Elapsed: 00:02 | Remaining: 00:00
+ - 51/67 : MaterialFootprint_vegetable oil            | ██████████████████████████████ | 100.0% | Progress:    34 of 34    | Elapsed: 00:00 | Remaining: 00:00
+ - 52/67 : MaterialFootprint_zinc                     | ██████████████████████████████ | 100.0% | Progress:   557 of 557   | Elapsed: 00:11 | Remaining: 00:00
+ - 53/67 : MaterialFootprint_zirconium                | ██████████████████████████████ | 100.0% | Progress:     9 of 9     | Elapsed: 00:00 | Remaining: 00:00
+ - 54/67 : WasteFootprint_composting-kilogram         | ██████████████████████████████ | 100.0% | Progress:    14 of 14    | Elapsed: 00:00 | Remaining: 00:00
+ - 55/67 : WasteFootprint_digestion-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:     6 of 6     | Elapsed: 00:00 | Remaining: 00:00
+ - 56/67 : WasteFootprint_digestion-kilogram          | ██████████████████████████████ | 100.0% | Progress:     4 of 4     | Elapsed: 00:00 | Remaining: 00:00
+ - 57/67 : WasteFootprint_hazardous-cubicmeter        | ██████████████████████████████ | 100.0% | Progress:   295 of 295   | Elapsed: 00:05 | Remaining: 00:00
+ - 58/67 : WasteFootprint_hazardous-kilogram          | ██████████████████████████████ | 100.0% | Progress:  1498 of 1498  | Elapsed: 00:30 | Remaining: 00:00
+ - 59/67 : WasteFootprint_incineration-cubicmeter     | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 60/67 : WasteFootprint_incineration-kilogram       | ██████████████████████████████ | 100.0% | Progress:  1687 of 1687  | Elapsed: 00:33 | Remaining: 00:00
+ - 61/67 : WasteFootprint_landfill-cubicmeter         | ██████████████████████████████ | 100.0% | Progress:     2 of 2     | Elapsed: 00:00 | Remaining: 00:00
+ - 62/67 : WasteFootprint_landfill-kilogram           | ██████████████████████████████ | 100.0% | Progress:  1430 of 1430  | Elapsed: 00:28 | Remaining: 00:00
+ - 63/67 : WasteFootprint_openburning-kilogram        | ██████████████████████████████ | 100.0% | Progress:   535 of 535   | Elapsed: 00:10 | Remaining: 00:00
+ - 64/67 : WasteFootprint_radioactive-cubicmeter      | ██████████████████████████████ | 100.0% | Progress:   295 of 295   | Elapsed: 00:05 | Remaining: 00:00
+ - 65/67 : WasteFootprint_recycling-kilogram          | ██████████████████████████████ | 100.0% | Progress:    63 of 63    | Elapsed: 00:01 | Remaining: 00:00
+ - 66/67 : WasteFootprint_total-cubicmeter            | ██████████████████████████████ | 100.0% | Progress:  3838 of 3838  | Elapsed: 01:16 | Remaining: 00:00
+ - 67/67 : WasteFootprint_total-kilogram              | ██████████████████████████████ | 100.0% | Progress: 27830 of 27830 | Elapsed: 09:23 | Remaining: 00:00
+****************************************************************************************************
+
+*** ExchangeEditor() completed for ecoinvent-3.9.1-cutoff in 0:17:46 (h:m:s) ***
+
+****************************************************************************************************
+
+** Verifying database ecoinvent-3.9.1-cutoff in project T-reX_macro **
+
+	Score: 6.79e-01 
+	Method: Total (kg) 
+	Activity: sulfur dichloride production 
+	Database: ecoinvent-3.9.1-cutoff
+
+** Database verified successfully! **
+
+==========================================================================================
+	*** Finished T-reX for ecoinvent-3.9.1-cutoff ***
+			Duration: 0:18:49 (h:m:s)
+	*** Woah woah wee waa, great success!! ***
+==========================================================================================
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+	*** Verifying all databases in the project **
+
+** Verifying database SSP1-PkBudg500-2020 in project T-reX_macro **
+
+	Score: 5.96e-03 
+	Method: Phosphate rock 
+	Activity: tillage, hoeing and earthing-up, potatoes 
+	Database: SSP1-PkBudg500-2020
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP1-PkBudg500-2030 in project T-reX_macro **
+
+	Score: 1.73e-08 
+	Method: Helium 
+	Activity: market for transport, freight, lorry >32 metric ton, EURO3 
+	Database: SSP1-PkBudg500-2030
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP1-PkBudg500-2040 in project T-reX_macro **
+
+	Score: 5.14e-05 
+	Method: Lead 
+	Activity: ethanol production from sugar beet 
+	Database: SSP1-PkBudg500-2040
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP1-PkBudg500-2050 in project T-reX_macro **
+
+	Score: -9.20e-11 
+	Method: Palladium 
+	Activity: market for waste polyethylene 
+	Database: SSP1-PkBudg500-2050
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP5-Base-2020 in project T-reX_macro **
+
+	Score: 8.81e-14 
+	Method: Rhodium 
+	Activity: cement, all types to generic market for cement, unspecified 
+	Database: SSP5-Base-2020
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP5-Base-2030 in project T-reX_macro **
+
+	Score: 4.80e-05 
+	Method: Titanium 
+	Activity: irrigation, drip 
+	Database: SSP5-Base-2030
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP5-Base-2040 in project T-reX_macro **
+
+	Score: 0.00e+00 
+	Method: Indium 
+	Activity: treatment of sewage sludge, 70% water, WWT, WW from LCD backlight production, municipal incineration 
+	Database: SSP5-Base-2040
+
+	Score: 3.66e-16 
+	Method: Selenium 
+	Activity: electricity production, hydro, reservoir, non-alpine region 
+	Database: SSP5-Base-2040
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database SSP5-Base-2050 in project T-reX_macro **
+
+	Score: 3.81e+04 
+	Method: Sand 
+	Activity: isolated phase bus 
+	Database: SSP5-Base-2050
+
+
+--------------------------------------------------------------------------------
+
+
+** Verifying database ecoinvent-3.9.1-cutoff in project T-reX_macro **
+
+	Score: 3.72e-06 
+	Method: Composting (kg) 
+	Activity: ammonium sulfate production 
+	Database: ecoinvent-3.9.1-cutoff
+
+
+--------------------------------------------------------------------------------
+
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ================================================================================
+                                    T-reX Completed                                 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Project:                  T-reX_macro
+    Total Databases:          9
+    Successfully Processed:   9
+    Duration:                 3:19:07 (h:m:s)
+
+    ================================================================================
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+                                  _____________                                 
+                                 /             \                                
+                               | Let's moooooo |                                
+                               | some LCA!     |                                
+                                 \             /                                
+                                  =============                                 
+                                              \                                 
+                                              \                                 
+                                              ^__^                              
+                                          (oo)\_______                          
+                                        (__)\       )\/\                        
+                                             ||----w |                          
+                                             ||     ||                          
+
+--------------------------------------------------------------------------------
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+================================================================================
+
+(trex-macro) stew@stew-kubu-box:~/code/gh/T-reX/src/T-reX$ 
