@@ -1,21 +1,16 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb  1 23:30:57 2023
+"""Module for performing LCA calculations and merging results."""
 
-@author: stew
-"""
 import sys
-import pandas as pd
-from datetime import datetime, timedelta
 import os
-from multiprocessing import cpu_count
+from datetime import datetime, timedelta
+from multiprocessing import cpu_count, Lock
+from pathlib import Path
+
+import pandas as pd
+import numpy as np
 from pathos.multiprocessing import ProcessingPool as Pool
 from tqdm import tqdm
 from termcolor import colored
-from multiprocessing import Lock  
-from pathlib import Path
-import numpy as np
 
 num_cpus = int(os.environ.get('SLURM_CPUS_PER_TASK', os.environ.get('SLURM_JOB_CPUS_PER_NODE', cpu_count())))
 print_lock = Lock()
@@ -29,23 +24,23 @@ import bw2calc as bc
 ## Project settings
 TITLE = "markets"
 PROJECT_NAME = "T-reX_macro"
-LIMIT = 100  # LIMIT the number of activities (for testing)
-VERBOSE = True
-use_multiprocessing = True
+LIMIT = None # LIMIT the number of activities (for testing)
+VERBOSE = True # best to be false if multiprocessing istrue
+USE_MULTIPROCESSING = False
 
 
 # Get the directory of the main script
 cwd = Path.cwd()
 # Get the path one level up
-dir_root = cwd.parents[0]
+dir_root = cwd #cwd.parents[0]
 dir_data = dir_root / "data/05_Calculations_output"
 dir_tmp = dir_data / "tmp"
 dir_logs = dir_data / "logs"
 
 dirs_results = [dir_data, dir_tmp, dir_logs]
-if not all(dir.exists() for dir in dirs_results):
-    for dir in dirs_results:
-        dir.mkdir(parents=True, exist_ok=True)
+if not all(d.exists() for d in dirs_results):
+    for d in dirs_results:
+        d.mkdir(parents=True, exist_ok=True)
 
 activities_list = dir_root / "data" / "04_Filter_output" / "activities_list_merged_T-reX_macro_markets.csv"
 
@@ -84,6 +79,8 @@ methods_waste_hazardous = [x for x in bd.methods.list if "Waste: Hazardous" in x
 
 methods_recipe_selected = [x for x in bd.methods.list if "ReCiPe 2016 v1.03, endpoint (H)" == x[0]]
 
+methods_recipe_endpoint = [x for x in methods_recipe_selected if "total:" in x[1]]
+
 # KEYWORDS_METHODS = [
 #     "T-reX",
 #     "ReCiPe 2016 v1.03, endpoint (H)",
@@ -101,7 +98,7 @@ methods_recipe_selected = [x for x in bd.methods.list if "ReCiPe 2016 v1.03, end
 #methods = methods_other  # methods_waste + methods_material +
 # methods = methods_other
 
-methods = methods_waste_total + methods_waste_hazardous + methods_recipe_selected
+methods = methods_waste_total + methods_waste_hazardous + methods_recipe_endpoint
 
 def LCIA():
 
@@ -128,7 +125,10 @@ def LCIA():
     else:
         # For dates further in the future, you might want to display the actual date
         display_time = finish_time.strftime('%Y-%m-%d %H:%M')
-    
+
+    if LIMIT:
+        print(f"** Limiting number of activities to: {LIMIT} per database")
+
     print(f"""
     * Running calculations in {len(DATABASE_NAMES)} databases in project: {PROJECT_NAME}
     
@@ -145,7 +145,7 @@ def LCIA():
     """)
     print('** Using methods:')
     
-    for method in sorted(set([x[0] for x in methods])): 
+    for method in sorted(set([x[1] for x in methods])): 
         print("\t", method)
     
     if LIMIT:
@@ -155,7 +155,7 @@ def LCIA():
     args_list = [(i+1, database_name, data, PROJECT_NAME, LIMIT) for i, database_name in enumerate(DATABASE_NAMES)]
     # Use multiprocessing to parallelize the work
     
-    if use_multiprocessing:
+    if USE_MULTIPROCESSING:
         with Pool(num_cpus) as pool:
             print("\n ****** Using multiprocessing, the output will be messy ****** \n ")
             pool.map(LCIA_singledatabase, args_list)
@@ -295,7 +295,7 @@ def LCIA_singledatabase(args):
             # print info about calculations
             if VERBOSE:
                 if abs(score) > 1:
-                    print(f"{database_name} {i+1}/{len(DATABASE_NAMES)} "
+                    print(f"{database_name} {i}/{len(DATABASE_NAMES)} "
                         f"Act.{j+1: >2}/{len(acts): <2} "
                         f"Met.{k+1: >2}/{len(methods): <2} |"
                         f" Score: {score:.1e}:"
@@ -354,8 +354,13 @@ def MergeResults():
     df_merged.drop("Unnamed: 0", axis=1, inplace=True)
     
     # save combined results as pickle and csv
-    combined_raw_csv = dir_tmp / f"{TITLE}_combined_rawresults_df.csv"
-    combined_raw_pickle = dir_tmp / f"{TITLE}_combined_rawresults_df.pickle"
+    if LIMIT:
+        combined_raw_csv = dir_data / f"{TITLE}_{LIMIT}_combined_rawresults_df.csv"
+        combined_raw_pickle = dir_data / f"{TITLE}_{LIMIT}_combined_rawresults_df.pickle"
+    else:
+        combined_raw_csv = dir_tmp / f"{TITLE}_combined_rawresults_df.csv"
+        combined_raw_pickle = dir_tmp / f"{TITLE}_combined_rawresults_df.pickle"
+    
     df_merged.to_csv(combined_raw_csv, sep=';', index=False)
     df_merged.to_pickle(combined_raw_pickle)
     print(f"\nSaved combined activities list \n\tto csv: {combined_raw_csv}\n\tand pickle: {combined_raw_pickle}")
