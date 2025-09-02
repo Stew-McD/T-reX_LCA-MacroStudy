@@ -81,16 +81,16 @@ methods_recipe_selected = [x for x in bd.methods.list if "ReCiPe 2016 v1.03, end
 
 methods_recipe_endpoint = [x for x in methods_recipe_selected if "total:" in x[1]]
 
-# KEYWORDS_METHODS = [
-#     "T-reX",
-#     "ReCiPe 2016 v1.03, endpoint (H)",
-#     # "EF v3.1 EN15804",
-#     # "EDIP 2003 no LT",
-#     # "Crustal Scarcity Indicator 2020",
-#     # "WasteAndMaterialFootprint",
-# ]
+KEYWORDS_METHODS = [
+    "T-reX",
+#    "ReCiPe 2016 v1.03, endpoint (H)",
+    # "EF v3.1 EN15804",
+    # "EDIP 2003 no LT",
+    # "Crustal Scarcity Indicator 2020",
+    # "WasteAndMaterialFootprint",
+]
 
-# methods_other = [x for x in bd.methods.list if any(e in x[0] for e in KEYWORDS_METHODS)]
+methods_other = [x for x in bd.methods.list if any(e in x[0] for e in KEYWORDS_METHODS)]
 
 # # exclude 'no LT'
 # methods_other = [x for x in methods_other if "no LT" not in x.name]
@@ -98,8 +98,8 @@ methods_recipe_endpoint = [x for x in methods_recipe_selected if "total:" in x[1
 #methods = methods_other  # methods_waste + methods_material +
 # methods = methods_other
 
-methods = methods_waste_total + methods_waste_hazardous + methods_recipe_endpoint
-
+methods = methods_waste_total + methods_waste_hazardous + methods_recipe_endpoint + methods_other
+methods = set(methods)  # remove duplicates
 def LCIA():
 
     start = datetime.now()
