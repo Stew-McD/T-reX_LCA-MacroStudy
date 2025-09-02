@@ -75,7 +75,6 @@ locations_filter = [
 units_filter = [
     "kilogram",
     "cubic meter",
-    "unit",
 ]
 
 activitytype_filter = [

@@ -23,7 +23,7 @@ import bw2calc as bc
 
 ## Project settings
 TITLE = "markets"
-PROJECT_NAME = "T-reX_macro"
+PROJECT_NAME = "TreX_macro-SSP15"
 LIMIT = None # LIMIT the number of activities (for testing)
 VERBOSE = True # best to be false if multiprocessing istrue
 USE_MULTIPROCESSING = False
