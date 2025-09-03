@@ -7,7 +7,7 @@ from pathlib import Path
 
 ## Project settings
 TITLE = "markets"
-PROJECT_NAME = "T-reX_macro"
+PROJECT_NAME = "TreX_macro-SSP15"
 LIMIT = None  # limit the number of activities (for testing)
 VERBOSE = True
 

@@ -2,7 +2,7 @@
 import os
 import pandas as pd
 
-FILE_RAW = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/05_Calculations_output/markets_combined_rawresults_df.pickle"
+FILE_RAW = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/05_Calculations_output/tmp/markets_combined_rawresults_df.pickle"
 
 FILE_ACTIVITIES = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/04_Filter_output/activities_list_merged_T-reX_macro_markets.csv"
 
@@ -11,7 +11,8 @@ FILE_COOKED = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/06_Data_processing_o
 
 ## Load data from calculations
 df_raw = pd.read_pickle(FILE_RAW)
-
+df_raw["Total (kg)"] = 1
+df_raw["Total (m3)"] = 1
 df_raw_columns_drop = ['parameters full', 'emptied', 'log parameters', 'activity type']
 
 df_raw = df_raw.drop(columns=df_raw_columns_drop)
