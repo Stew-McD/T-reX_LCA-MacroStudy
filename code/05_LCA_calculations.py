@@ -23,7 +23,7 @@ import bw2calc as bc
 
 ## Project settings
 TITLE = "markets"
-PROJECT_NAME = "TreX_macro-SSP15"
+PROJECT_NAME = "TreX_macrostudy"
 LIMIT = None # LIMIT the number of activities (for testing)
 VERBOSE = True # best to be false if multiprocessing istrue
 USE_MULTIPROCESSING = False
@@ -42,7 +42,9 @@ if not all(d.exists() for d in dirs_results):
     for d in dirs_results:
         d.mkdir(parents=True, exist_ok=True)
 
-activities_list = dir_root / "data" / "04_Filter_output" / "activities_list_merged_T-reX_macro_markets.csv"
+# activities_list = dir_root / "data" / "04_Filter_output" / "activities_list_merged_T-reX_macro_markets.csv"
+
+activities_list = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/04_Filter_output/markets/activities_list_merged_TreX_macrostudy_markets.csv"
 
 if PROJECT_NAME not in bd.projects:
     print(f'{"*"*80}\n')

@@ -7,7 +7,7 @@ from pathlib import Path
 
 ## Project settings
 TITLE = "markets"
-PROJECT_NAME = "TreX_macro-SSP15"
+PROJECT_NAME = "TreX_macrostudy"
 LIMIT = None  # limit the number of activities (for testing)
 VERBOSE = True
 
@@ -61,7 +61,8 @@ exclude_filter = [
     "waste",
     "services",
     "waste",
-    "scrap" "site preparation",
+    "scrap",
+    "site preparation",
     "construction",
     "maintainence",
 ]
