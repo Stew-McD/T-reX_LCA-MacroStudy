@@ -6,11 +6,14 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-
-
+import plotly.io as pio
+import re
 ## Set color palette
 # sns.set_palette("colorblind")
 sns.set_theme(style="whitegrid", context="talk")  # larger fonts
+# pio.templates.default = "simple_white"
+pio.templates.default = "plotly_white"
+
 okabe_ito_9 = [
     "#E69F00",  # orange
     "#56B4E9",  # sky blue
@@ -19,7 +22,7 @@ okabe_ito_9 = [
     "#0072B2",  # blue
     "#D55E00",  # vermillion
     "#CC79A7",  # reddish purple
-    "#000000",  # black
+    "#494949",  # black
     "#999999"   # gray
 ]
 ## Set output dirs
@@ -28,88 +31,116 @@ DIR_RESULTS = Path("/home/stew/code/gh/T-reX_LCA-MacroStudy/data/07_Visualisatio
 
 DIR_BOX = DIR_RESULTS / "boxplots"
 
+os.makedirs(DIR_BOX, exist_ok=True)
+
+
 ## Import data
 FILE_RESULTS = "/home/stew/code/gh/T-reX_LCA-MacroStudy/data/06_Data_processing_output/markets_combined_cookedresults_df.csv"
 df = pd.read_csv(FILE_RESULTS, sep=";")
 
-df.rename(
-    columns={
-        "name" : "Name",
-        "reference product": "Reference product",
-        "unit": "Unit",
-        "location": "Location",
-        "prod_category": "Product category",
-        "prod_sub_category": "Product subcategory",
-        'ecosystem quality' : 'Ecosystem damage (species-year/kg)',
-        'human health' : 'Human health damage (DALY/kg)',
-        'natural resources' : 'Natural resource scarcity (USD2013/kg)',
-        "Total waste (kg)": "Total waste (kg/kg)",
-        "Hazardous waste (kg)": "Hazardous waste (kg/kg)",
-    },
-    inplace=True
-)
+df.rename(columns={"Database - Ssp": "Database - SSP", "Database - Rcp": "Database - RCP"}, inplace=True)
 
-cols = ['Code', 'Name', 'Reference product', 'Unit', 'Location',
-       'Product category', 'Product subcategory',
-       'Ecosystem damage (species-year/kg)', 'Human health damage (DALY/kg)',
-       'Natural resource scarcity (USD2013/kg)', 'Total waste (kg/kg)',
-       'Hazardous waste (kg/kg)', 'Year', 'Database']
+cols_metadata = ['Code', 'Location', "Database",'Database - SSP', 'Database - RCP', 'Year', 'Name','Unit', 'Reference Product',  'Category', 'Subcategory']
 
-methods = ['Ecosystem damage (species-year/kg)', 
-           'Human health damage (DALY/kg)',
-           'Natural resource scarcity (USD2013/kg)', 
-           'Total waste (kg/kg)',
-           'Hazardous waste (kg/kg)']
+# alpha sort the methods columns
+cols_methods = sorted([col for col in df.columns if col not in cols_metadata], reverse=True)
+
+# #make a box scatter plot for total waste and hazardous waste split by database
+# df_box_total = df[df["Database"] == "ecoinvent-default-2020"]
+
+# filter out waste products if the following strings are in the name
+# list of substrings to filter out
+waste_acts = [
+    # "market for sewage sludge",
+    # "market for manure",
+    "market for waste discharge",
+    # "market for liquid packaging board",
+]
+
+# build a regex OR pattern from the fragments
+pattern = "|".join(map(re.escape, waste_acts))
+
+# drop rows where "Name" contains any of those fragments
+df_box_total = df.copy()
+df_clean = df_box_total[~df_box_total["Name"].str.contains(pattern, case=False, na=False)]
 
 
-#make a box scatter plot for total waste and hazardous waste split by database
-df_box_total = df[df["Database"] == "ecoinvent-default"]
-df_clean = df_box_total.copy()
+def box_plot(df, database):
+    os.makedirs(DIR_BOX / database, exist_ok=True)
+    df_clean = df[df["Database"] == database].copy()
 
-for method in methods:
-    df_clean.loc[df_clean[method] <= 0, method] = np.nan  
-    fig = px.box(
-        df_clean,
-        x=method,                # replace with your value column
-        y="Product category",
-        color="Product category",           # group by method
+    # Make plotly boxplots
+    for method in cols_methods:
+        fig = px.box(
+            df_clean,
+            x=method,                # replace with your value column
+            y="Category",
+            color="Category",           # group by method
         orientation="h",          # horizontal box plot
         points="outliers",              # show all points as scatter
-        log_x=True,                   # set x-axis to log scale
-        hover_data=["Name", "Reference product", "Product subcategory", "Database"],  # add columns to hover
+        log_x=False,                   # set x-axis to log scale
+        hover_data=["Name", "Reference Product", "Subcategory", "Database"],  # add columns to hover
         color_discrete_sequence=okabe_ito_9,
     )
-    fig.update_layout(yaxis=dict(showticklabels=True))
-    fig.write_image(DIR_BOX / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.svg")
-    # save also as html
-    fig.write_html(DIR_BOX / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.html")
-    print(f"Saved plotly boxplot for {method}")
+        fig.update_layout(yaxis=dict(showticklabels=True))
+        fig.write_image(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.svg")
+        # save also as html
+        fig.write_html(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.html")
+        print(f"Saved plotly boxplot for {method}")
+        fig.update_layout(xaxis_type="log")
+        fig.write_image(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly_log.svg")
+        fig.write_html(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly_log.html")
     # fig.show()
+    print(f"Saved all plotly boxplots for {database}")
+    # Make seaborn boxplots
+
+    for method in cols_methods:
+        # df_clean.loc[df_clean[method] <= 0, method] = np.nan  
+        plt.figure(figsize=(10, 6))
+        ax = sns.boxplot(
+            data=df_clean,
+            x=method,
+            y="Category",
+            hue="Category",
+            orient="h",
+            showfliers=True,
+            palette=okabe_ito_9
+        )
+        ax.set_xscale("log")  # log scale
+        ax.set_ylabel("")     # remove y labels if desired
+        #plt.title(f"{method} by Product category")
+        plt.tight_layout()
+        plt.savefig(
+            DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_seaborn_log.svg",
+            format="svg",  # optional, inferred from extension
+            bbox_inches="tight"
+        )
+        
+        # make non-log version
+        plt.figure(figsize=(10, 6))
+        ax = sns.boxplot(
+            data=df_clean,
+            x=method,
+            y="Category",
+            hue="Category",
+            orient="h",
+            showfliers=True,
+            palette=okabe_ito_9
+        )
+        ax.set_xlim(left=0)   # x starts at 0
+        # plt.show()
+        ax.set_ylabel("")     # remove y labels if desired
+        #plt.title(f"{method} by Product category")
+        plt.tight_layout()
+        plt.savefig(
+            DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_seaborn.svg",
+            format="svg",  # optional, inferred from extension
+            bbox_inches="tight"
+        )
+        print(f"Saved boxplot for {method}")
+    print(f"Saved all seaborn boxplots for {database}")
     
-
-## Make seaborn boxplots
-
-for method in methods:
-    df_clean.loc[df_clean[method] <= 0, method] = np.nan  
-    plt.figure(figsize=(10, 6))
-    ax = sns.boxplot(
-        data=df_clean,
-        x=method,
-        y="Product category",
-        hue="Product category",
-        orient="h",
-        showfliers=True,
-        palette=okabe_ito_9
-    )
-    ax.set_xscale("log")  # log scale
-    ax.set_xlim(left=0)   # x starts at 0
-    ax.set_ylabel("")     # remove y labels if desired
-    #plt.title(f"{method} by Product category")
-    plt.tight_layout()
-    plt.savefig(
-        DIR_BOX / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_seaborn.svg",
-        format="svg",  # optional, inferred from extension
-        bbox_inches="tight"
-    )
-    print(f"Saved boxplot for {method}")
-    # plt.show()
+# Run box plot function for each database
+for db in df["Database"].unique():
+    df_box = df[df["Database"] == db]
+    box_plot(df_box, db)
