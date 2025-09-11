@@ -15,15 +15,15 @@ sns.set_theme(style="whitegrid", context="talk")  # larger fonts
 pio.templates.default = "plotly_white"
 
 okabe_ito_9 = [
-    "#E69F00",  # orange
-    "#56B4E9",  # sky blue
-    "#009E73",  # bluish green
-    "#F0E442",  # yellow
-    "#0072B2",  # blue
-    "#D55E00",  # vermillion
-    "#CC79A7",  # reddish purple
-    "#494949",  # black
-    "#999999"   # gray
+    "#D663EC", 
+    "#57B424", 
+    "#56B4E9",  
+    "#F0B342", 
+    "#0072B2",  
+    "#D55E00",  
+    "#FF22BD", 
+    "#22D43F", 
+    "#999999", 
 ]
 ## Set output dirs
 
@@ -142,5 +142,7 @@ def box_plot(df, database):
     
 # Run box plot function for each database
 for db in df["Database"].unique():
-    df_box = df[df["Database"] == db]
-    box_plot(df_box, db)
+        df_box = df[df["Database"] == db]
+        box_plot(df_box, db)
+
+# if db in ['ei-cutoff-3.9-remind-SSP5-PkBudg500-2040','ei-cutoff-3.9-remind-SSP5-PkBudg500-2050']:
