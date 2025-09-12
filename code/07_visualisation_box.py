@@ -23,7 +23,7 @@ okabe_ito_9 = [
     "#D55E00",  
     "#FF22BD", 
     "#22D43F", 
-    "#999999", 
+    "#800000", 
 ]
 ## Set output dirs
 
@@ -77,12 +77,30 @@ def box_plot(df, database):
             y="Category",
             color="Category",           # group by method
         orientation="h",          # horizontal box plot
-        points="outliers",              # show all points as scatter
+        points="all",              # show all points as scatter
         log_x=False,                   # set x-axis to log scale
         hover_data=["Name", "Reference Product", "Subcategory", "Database"],  # add columns to hover
         color_discrete_sequence=okabe_ito_9,
     )
-        fig.update_layout(yaxis=dict(showticklabels=True))
+        # Make boxes transparent
+        for trace in fig.data:
+            trace.update(fillcolor='rgba(0,0,0,0)')
+        fig.update_xaxes(
+        showgrid=True,
+        gridcolor='dimgray',      # darker gridlines
+        gridwidth=0.3,          # thicker gridlines
+        # minor_ticks="inside",
+        minor=dict(showgrid=True, gridcolor='black', gridwidth=0.3)
+        )
+        fig.update_traces(
+            jitter=0,                  # no horizontal offset
+            marker=dict(opacity=0.6)   # slightly transparent dots if overlap is dense
+        )
+        fig.update_layout(
+            xaxis=dict(showline=True, linewidth=1, linecolor='black', mirror=True),
+            yaxis=dict(showticklabels=True, showline=True, linewidth=1, linecolor='black', mirror=True),
+            yaxis2=dict(showline=True, linewidth=1, linecolor='black', mirror=True)
+        )
         fig.write_image(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.svg")
         # save also as html
         fig.write_html(DIR_BOX / database / f"boxplot_{method.replace(' ', '_').replace('/', '_')}_plotly.html")

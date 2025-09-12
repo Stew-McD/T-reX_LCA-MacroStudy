@@ -1,7 +1,7 @@
 % Created by Dan O'Shea (@djoshea) 2022.
 % Inspired by https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers
 
-\documentclass[9pt,margin=1mm]{standalone}
+\documentclass[7pt,margin=1mm]{standalone}
 \PassOptionsToPackage{svgnames}{xcolor}
 \usepackage{tikz} 
 \usetikzlibrary{calc,intersections}
@@ -53,7 +53,6 @@
 % column labels
 \foreach \a [count=\n] in {
     SCM,    % Stewart Charles McDowall
-    NK,     % Nathalie Körf
     CFB,    % Carlos Felipe Blanco
     SC,      % Stefano Cucurachi
     % ... (other authors, if any)
@@ -71,7 +70,7 @@
     Validation,
     Visualisation,
     % Resources,
-    % Software,
+    Software,
     Writing---Orig. Draft,
     Writing---Rev. \& Ed.,
     Funding acquisition,
@@ -83,19 +82,19 @@
 \foreach \y [count=\n] in {
     % Intensity levels for each row label for SCM, CFB, SC...
     % The intensity values (\hi, \mid, \lo, 0) should correspond to the level of contribution in the order of authors listed above
-    {\hi,\lo,\lo,\lo},  % Conceptualization
-    {\hi,\mid,\lo,\lo},    % Methodology
-    {\hi,\mid,0,0},        % Investigation
-    {\hi,\lo,0,0},        % Data curation
-    {\hi,0,0,0},        % Formal analysis
-    {\hi,\lo,\lo,\lo},        % Validation
-    {\hi,0,0,0},        % Visualisation
+    {\hi,\lo,\lo},  % Conceptualization
+    {\hi,\lo,\lo},    % Methodology
+    {\hi,0,0},        % Investigation
+    {\hi,0,0},        % Data curation
+    {\hi,0,0},        % Formal analysis
+    {\hi,\lo,\lo},        % Validation
+    {\hi,0,0},        % Visualisation
     % {0,0,\mid},     % Resources (none specified)
-    %{\hi,\mid,0},    % Software
-    {\hi,0,0,0},        % Writing---Original Draft
-    {\hi,\mid,\mid,\mid},  % Writing---Reviewing and Editing
-    {0,0,\lo,\hi},      % Funding acquisition
-    {0,0,\lo,\hi},      % Supervision
+    {\hi,\mid,\lo},    % Software
+    {\hi,0,0},        % Writing---Original Draft
+    {\hi,\mid,\mid},  % Writing---Reviewing and Editing
+    {0,\lo,\hi},      % Funding acquisition
+    {0,\lo,\hi},      % Supervision
 } {
     % heatmap tiles
     \foreach \x [count=\m] in \y {
