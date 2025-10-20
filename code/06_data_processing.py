@@ -112,7 +112,9 @@ df_merged.columns = [col.title() for col in df_merged.columns]
 df_cooked = df_merged.copy()
 
 
+# drop construction activities
 
+df_cooked = df_cooked[~df_cooked["Category"].str.contains("Construction", case=False, na=False)]
 
 
 df_cooked.to_csv(FILE_COOKED, sep=";", index=False)
