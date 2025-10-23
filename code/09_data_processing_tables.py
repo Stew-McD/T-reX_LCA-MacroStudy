@@ -24,6 +24,8 @@ category_mapping = {
 # Add the full category name column
 df_results['Category Full Name'] = df_results['Category'].map(category_mapping)
 
+
+
 # get statistics about the categories
 df_category_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
 category_stats = df_category_stats["Category"].value_counts()
@@ -33,7 +35,7 @@ category_stats = pd.DataFrame(category_stats.sort_index())
 category_stats["Category Full Name"] = category_stats.index.map(category_mapping)
 category_stats.reset_index(inplace=True)
 # rename columns
-category_stats.rename(columns={"Category Full Name": "Category full name", "Category": "Abbreviated name", "Count" : "# of activities"}, inplace=True)
+category_stats.rename(columns={"Category Full Name": "Category full name", "Category": "Abbreviated name", "count" : "# of activities"}, inplace=True)
 
 category_stats = category_stats[["Category full name","Abbreviated name", "# of activities"]]
 
@@ -53,4 +55,22 @@ waste_stats_sci.to_csv(DIR_OUTPUT + "waste_statistics_by_category.csv", sep=";")
 
 
 # get the top 3 activities generating the most waste in each category
-top_waste_activities = df_waste_stats.sort_values(by="Waste - Total", ascending=False).groupby("Category").head(3)
+cols = ["Name", "Waste - Total", "Category", "Price (EUR2005)"]
+
+df_waste_top = df_waste_stats[cols]
+
+top_waste_activities = df_waste_top.sort_values(by="Waste - Total", ascending=False).groupby("Category").head(3)
+
+top_waste_activities.sort_values(by=["Category", "Waste - Total"], ascending=[True, False], inplace=True)
+
+top_waste_activities.to_csv(DIR_OUTPUT + "top_waste_generating_activities_by_category.csv", sep=";", index=False)
+
+
+# calculate statistics about the price of activities in each category
+df_price_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+
+price_stats = df_price_stats.groupby("Category")["Price (EUR2005)"].agg(
+    ["mean", "std", "min", "max"]
+)
+price_stats_sci = price_stats.applymap(lambda x: f"{x:.2e}")
+price_stats_sci.to_csv(DIR_OUTPUT + "price_statistics_by_category.csv", sep=";")

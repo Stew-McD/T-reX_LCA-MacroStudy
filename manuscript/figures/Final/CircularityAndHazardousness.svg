@@ -3,8 +3,8 @@
 
 <svg
    width="174mm"
-   height="68.684212mm"
-   viewBox="0 0 174 68.684212"
+   height="64.683998mm"
+   viewBox="0 0 174 64.683998"
    version="1.1"
    id="svg70339"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -27,21 +27,16 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4734708"
-     inkscape:cx="238.89174"
-     inkscape:cy="13.912729"
+     inkscape:zoom="2.0838024"
+     inkscape:cx="247.14436"
+     inkscape:cy="81.341686"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g117728">
-    <inkscape:grid
-       type="xygrid"
-       id="grid87646"
-       originx="0"
-       originy="0" />
-  </sodipodi:namedview>
+     inkscape:current-layer="g117728"
+     showguides="false" />
   <defs
      id="defs70336">
     <rect
@@ -239,7 +234,8 @@
               </g>
               <g
                  class="minor-gridlayer"
-                 id="g11248">
+                 id="g11248"
+                 transform="matrix(1,0,0,0.908237,0,5.456852)">
                 <g
                    class="x"
                    id="g11244">
@@ -364,7 +360,8 @@
               </g>
               <g
                  class="gridlayer"
-                 id="g11262">
+                 id="g11262"
+                 transform="matrix(1,0,0,0.90796518,0,5.5220893)">
                 <g
                    class="x"
                    id="g11258">
@@ -399,7 +396,8 @@
               </g>
               <g
                  class="zerolinelayer"
-                 id="g11266">
+                 id="g11266"
+                 transform="matrix(1,0,0,0.908237,0,5.456852)">
                 <path
                    class="xzl zl crisp"
                    transform="translate(148)"
@@ -10040,56 +10038,6 @@
                            id="path14488" />
                       </g>
                     </g>
-                    <g
-                       class="trace boxes"
-                       style="opacity:1"
-                       id="g14510">
-                      <path
-                         class="box"
-                         d="m 21.11,346.88 v -19.43 m -0.02,19.43 v -19.43 h 0.02 v 19.43 z m 0,-9.71 v 0 m 0.02,0 v 0 m -0.02,4.86 v -9.72 m 0.02,9.72 v -9.72"
-                         style="vector-effect:none;fill:#000000;fill-opacity:0;stroke:#800000;stroke-width:2px;stroke-opacity:1"
-                         id="path14494" />
-                      <g
-                         class="points"
-                         id="g14508">
-                        <path
-                           class="point"
-                           transform="translate(21.04,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14496" />
-                        <path
-                           class="point"
-                           transform="translate(21.09,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14498" />
-                        <path
-                           class="point"
-                           transform="translate(21.11,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14500" />
-                        <path
-                           class="point"
-                           transform="translate(21.11,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14502" />
-                        <path
-                           class="point"
-                           transform="translate(21.11,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14504" />
-                        <path
-                           class="point"
-                           transform="translate(21.11,351.74)"
-                           d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                           style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                           id="path14506" />
-                      </g>
-                    </g>
                   </g>
                 </g>
               </g>
@@ -10098,20 +10046,21 @@
                  id="g14518" />
               <path
                  class="xlines-above crisp"
-                 d="M 126,420.5 H 548 M 126,59.5 h 422"
-                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
+                 d="M 126,387.37051 H 548 M 126,59.496954 h 422"
+                 style="fill:none;stroke:#000000;stroke-width:0.953015px;stroke-opacity:1"
                  id="path14520" />
               <path
                  class="ylines-above crisp"
-                 d="M 126.5,60 V 420 M 547.5,60 V 420"
-                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
+                 d="M 126.5,59.951072 V 386.91639 M 547.5,59.951072 V 386.91639"
+                 style="fill:none;stroke:#000000;stroke-width:0.953015px;stroke-opacity:1"
                  id="path14522" />
               <g
                  class="overlines-above"
                  id="g14524" />
               <g
                  class="xaxislayer-above"
-                 id="g14546">
+                 id="g14546"
+                 transform="translate(0,-27.510273)">
                 <g
                    class="xtick"
                    id="g14528">
@@ -10121,7 +10070,9 @@
                      y="435.39999"
                      transform="translate(148)"
                      style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-                     id="text14526">0</text>
+                     id="text14526"><tspan
+                       style="font-weight:bold"
+                       id="tspan27304">0</tspan></text>
                 </g>
                 <g
                    class="xtick"
@@ -10132,7 +10083,9 @@
                      y="435.39999"
                      style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                      transform="translate(236.75)"
-                     id="text14530">10</text>
+                     id="text14530"><tspan
+                       style="font-weight:bold"
+                       id="tspan27306">10</tspan></text>
                 </g>
                 <g
                    class="xtick"
@@ -10143,7 +10096,9 @@
                      y="435.39999"
                      style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                      transform="translate(325.51)"
-                     id="text14534">20</text>
+                     id="text14534"><tspan
+                       style="font-weight:bold"
+                       id="tspan27308">20</tspan></text>
                 </g>
                 <g
                    class="xtick"
@@ -10154,7 +10109,9 @@
                      y="435.39999"
                      style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                      transform="translate(414.27)"
-                     id="text14538">30</text>
+                     id="text14538"><tspan
+                       style="font-weight:bold"
+                       id="tspan27310">30</tspan></text>
                 </g>
                 <g
                    class="xtick"
@@ -10165,25 +10122,14 @@
                      y="435.39999"
                      style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                      transform="translate(503.02)"
-                     id="text14542">40</text>
+                     id="text14542"><tspan
+                       style="font-weight:bold"
+                       id="tspan27312">40</tspan></text>
                 </g>
               </g>
               <g
                  class="yaxislayer-above"
                  id="g14584">
-                <g
-                   class="ytick"
-                   id="g14550">
-                  <text
-                     text-anchor="end"
-                     x="123.6"
-                     y="4.1999998"
-                     transform="translate(0,397.17)"
-                     style="font-size:16.7997px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-                     id="text14548"><tspan
-                       style="fill:#000000"
-                       id="tspan66771">Construction</tspan></text>
-                </g>
                 <g
                    class="ytick"
                    id="g14554">
@@ -10336,7 +10282,8 @@
           </g>
           <g
              class="infolayer"
-             id="g14824">
+             id="g14824"
+             transform="translate(0,-27.510273)">
             <g
                class="g-gtitle"
                id="g14814" />
@@ -10359,135 +10306,9 @@
           </g>
         </g>
         <g
-           class="minor-gridlayer"
-           id="g16728"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
-          <g
-             class="x"
-             id="g16724">
-            <path
-               class="xgrid crisp"
-               transform="translate(171.25)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16696" />
-            <path
-               class="xgrid crisp"
-               transform="translate(194.65)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16698" />
-            <path
-               class="xgrid crisp"
-               transform="translate(218.05)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16700" />
-            <path
-               class="xgrid crisp"
-               transform="translate(241.46)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16702" />
-            <path
-               class="xgrid crisp"
-               transform="translate(288.26)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16704" />
-            <path
-               class="xgrid crisp"
-               transform="translate(311.66)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16706" />
-            <path
-               class="xgrid crisp"
-               transform="translate(335.07)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16708" />
-            <path
-               class="xgrid crisp"
-               transform="translate(358.47)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16710" />
-            <path
-               class="xgrid crisp"
-               transform="translate(405.28)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16712" />
-            <path
-               class="xgrid crisp"
-               transform="translate(428.68)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16714" />
-            <path
-               class="xgrid crisp"
-               transform="translate(452.08)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16716" />
-            <path
-               class="xgrid crisp"
-               transform="translate(475.48)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16718" />
-            <path
-               class="xgrid crisp"
-               transform="translate(522.29)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16720" />
-            <path
-               class="xgrid crisp"
-               transform="translate(545.69)"
-               d="M 0,60 V 420"
-               style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
-               id="path16722" />
-          </g>
-          <g
-             class="y"
-             id="g16726" />
-        </g>
-        <g
-           class="gridlayer"
-           id="g16740"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
-          <g
-             class="x"
-             id="g16736">
-            <path
-               class="xgrid crisp"
-               transform="translate(264.86)"
-               d="M 0,60 V 420"
-               style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
-               id="path16730" />
-            <path
-               class="xgrid crisp"
-               transform="translate(381.87)"
-               d="M 0,60 V 420"
-               style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
-               id="path16732" />
-            <path
-               class="xgrid crisp"
-               transform="translate(498.89)"
-               d="M 0,60 V 420"
-               style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
-               id="path16734" />
-          </g>
-          <g
-             class="y"
-             id="g16738" />
-        </g>
-        <g
            class="zerolinelayer"
            id="g16744"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
+           transform="matrix(0.16345252,0,0,0.14989306,1.9430666,6.8964407)">
           <path
              class="xzl zl crisp"
              transform="translate(147.84)"
@@ -20099,75 +19920,159 @@
                      id="path19966" />
                 </g>
               </g>
-              <g
-                 class="trace boxes"
-                 style="opacity:1"
-                 id="g19988">
-                <path
-                   class="box"
-                   d="m 208.44,346.88 v -19.43 m -30.07,19.43 v -19.43 h 78.83 v 19.43 z m 0,-9.71 h -13.39 m 92.22,0 h 49.13 m -141.35,4.86 v -9.72 m 141.35,9.72 v -9.72"
-                   style="vector-effect:none;fill:#000000;fill-opacity:0;stroke:#800000;stroke-width:2px;stroke-opacity:1"
-                   id="path19972" />
-                <g
-                   class="points"
-                   id="g19986">
-                  <path
-                     class="point"
-                     transform="translate(164.98,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19974" />
-                  <path
-                     class="point"
-                     transform="translate(178.37,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19976" />
-                  <path
-                     class="point"
-                     transform="translate(199.64,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19978" />
-                  <path
-                     class="point"
-                     transform="translate(217.24,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19980" />
-                  <path
-                     class="point"
-                     transform="translate(257.2,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19982" />
-                  <path
-                     class="point"
-                     transform="translate(306.33,351.74)"
-                     d="M 3,0 A 3,3 0 1 1 0,-3 3,3 0 0 1 3,0 Z"
-                     style="opacity:0.6;fill:#800000;fill-opacity:1;stroke-width:0px"
-                     id="path19984" />
-                </g>
-              </g>
             </g>
           </g>
         </g>
-        <path
-           class="xlines-above crisp"
-           d="M 126,420.5 H 548 M 126,59.5 h 422"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
-           id="path19998"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)" />
-        <path
-           class="ylines-above crisp"
-           d="M 126.5,60 V 420 M 547.5,60 V 420"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
-           id="path20000"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)" />
+        <g
+           id="g21781"
+           transform="matrix(1,0,0,0.9108263,0,1.5998901)">
+          <g
+             class="minor-gridlayer"
+             id="g16728"
+             transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
+            <g
+               class="x"
+               id="g16724">
+              <path
+                 class="xgrid crisp"
+                 transform="translate(171.25)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16696" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(194.65)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16698" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(218.05)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16700" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(241.46)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16702" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(288.26)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16704" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(311.66)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16706" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(335.07)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16708" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(358.47)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16710" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(405.28)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16712" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(428.68)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16714" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(452.08)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16716" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(475.48)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16718" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(522.29)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16720" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(545.69)"
+                 d="M 0,60 V 420"
+                 style="stroke:#000000;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16722" />
+            </g>
+            <g
+               class="y"
+               id="g16726" />
+          </g>
+          <g
+             class="gridlayer"
+             id="g16740"
+             transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
+            <g
+               class="x"
+               id="g16736">
+              <path
+                 class="xgrid crisp"
+                 transform="translate(264.86)"
+                 d="M 0,60 V 420"
+                 style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16730" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(381.87)"
+                 d="M 0,60 V 420"
+                 style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16732" />
+              <path
+                 class="xgrid crisp"
+                 transform="translate(498.89)"
+                 d="M 0,60 V 420"
+                 style="stroke:#696969;stroke-width:0.3px;stroke-opacity:1"
+                 id="path16734" />
+            </g>
+            <g
+               class="y"
+               id="g16738" />
+          </g>
+          <path
+             class="xlines-above crisp"
+             d="M 126,420.5 H 548 M 126,59.5 h 422"
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
+             id="path19998"
+             transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)" />
+        </g>
+        <g
+           id="g21784"
+           transform="matrix(1.0032173,0,0,0.91519992,-0.07277434,1.3474754)">
+          <path
+             class="ylines-above crisp"
+             d="M 126.5,60 V 420 M 547.5,60 V 420"
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:1"
+             id="path20000"
+             transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)" />
+        </g>
         <g
            class="xaxislayer-above"
            id="g20020"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
+           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,1.5862501)">
           <g
              class="xtick"
              id="g20006">
@@ -20177,7 +20082,9 @@
                y="435.39999"
                transform="translate(147.84)"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text20004">0</text>
+               id="text20004"><tspan
+                 style="font-weight:bold"
+                 id="tspan27302">0</tspan></text>
           </g>
           <g
              class="xtick"
@@ -20188,7 +20095,9 @@
                y="435.39999"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                transform="translate(264.86)"
-               id="text20008">5</text>
+               id="text20008"><tspan
+                 style="font-weight:bold"
+                 id="tspan27296">5</tspan></text>
           </g>
           <g
              class="xtick"
@@ -20199,7 +20108,9 @@
                y="435.39999"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                transform="translate(381.87)"
-               id="text20012">10</text>
+               id="text20012"><tspan
+                 style="font-weight:bold"
+                 id="tspan27298">10</tspan></text>
           </g>
           <g
              class="xtick"
@@ -20210,22 +20121,10 @@
                y="435.39999"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
                transform="translate(498.89)"
-               id="text20016">15</text>
+               id="text20016"><tspan
+                 style="font-weight:bold"
+                 id="tspan27300">15</tspan></text>
           </g>
-        </g>
-        <g
-           class="ytick"
-           id="g20024"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
-          <text
-             text-anchor="end"
-             x="123.6"
-             y="4.1999998"
-             transform="translate(0,397.17)"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.7997px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-             id="text20022"><tspan
-               style="fill:#000000"
-               id="tspan66773">Construction</tspan></text>
         </g>
         <g
            class="ytick"
@@ -20342,7 +20241,7 @@
         <g
            class="infolayer"
            id="g20298"
-           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,6.0828733)">
+           transform="matrix(0.16345252,0,0,0.16345252,1.9430666,1.5862501)">
           <g
              class="g-gtitle"
              id="g20288" />
@@ -20367,24 +20266,24 @@
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.08919px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.257432"
            x="4.6574993"
-           y="17.095575"
+           y="16.904116"
            id="text87650"><tspan
              sodipodi:role="line"
              id="tspan87648"
              style="stroke-width:0.257432"
              x="4.6574993"
-             y="17.095575">a)</tspan></text>
+             y="16.904116">a)</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.08919px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.257432"
            x="95.829872"
-           y="17.466194"
+           y="16.904116"
            id="text87654"><tspan
              sodipodi:role="line"
              id="tspan87652"
              style="stroke-width:0.257432"
              x="95.829872"
-             y="17.466194">b)</tspan></text>
+             y="16.904116">b)</tspan></text>
       </g>
     </g>
   </g>
