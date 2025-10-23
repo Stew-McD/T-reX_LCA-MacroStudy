@@ -43,8 +43,14 @@ category_stats.to_csv(DIR_OUTPUT + "category_statistics.csv", sep=";", index=Fal
 # i.e mean, std, min, max waste generated per category
 
 df_waste_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
-waste_stats = df_waste_stats.groupby("Category")["Waste - Total"].agg(
-    ["mean", "std", "min", "max", "count"]
-)
 
-waste_stats.to_csv(DIR_OUTPUT + "waste_statistics_by_category.csv", sep="
+waste_stats = df_waste_stats.groupby("Category")["Waste - Total"].agg(
+    ["mean", "std", "min", "max"]
+)
+waste_stats_sci = waste_stats.applymap(lambda x: f"{x:.2e}")
+
+waste_stats_sci.to_csv(DIR_OUTPUT + "waste_statistics_by_category.csv", sep=";")
+
+
+# get the top 3 activities generating the most waste in each category
+top_waste_activities = df_waste_stats.sort_values(by="Waste - Total", ascending=False).groupby("Category").head(3)

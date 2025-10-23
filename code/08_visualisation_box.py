@@ -27,7 +27,7 @@ okabe_ito_9 = [
 ]
 ## Set output dirs
 
-DIR_RESULTS = Path("/home/stew/code/gh/T-reX_LCA-MacroStudy/data/07_Visualisation_output")
+DIR_RESULTS = Path("/home/stew/code/gh/T-reX_LCA-MacroStudy/data/08_Visualisation_output")
 
 DIR_BOX = DIR_RESULTS / "boxplots"
 
