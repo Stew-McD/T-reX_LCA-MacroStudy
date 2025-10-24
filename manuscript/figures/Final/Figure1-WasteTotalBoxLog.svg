@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.827"
-     inkscape:cx="457.07376"
-     inkscape:cy="399.63724"
+     inkscape:zoom="1.1695546"
+     inkscape:cx="197.51108"
+     inkscape:cy="234.70473"
      inkscape:window-width="1920"
-     inkscape:window-height="1052"
-     inkscape:window-x="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g5383" />
+     inkscape:current-layer="g5129" />
   <defs
      id="defs-a3a62c">
     <g
@@ -9990,60 +9990,67 @@
                y="435.39999"
                transform="translate(137.27)"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5105">0.01</text>
+               id="text5105"><tspan
+                 style="fill:#000000"
+                 id="tspan14101">0.01</tspan></text>
           </g>
           <g
              class="xtick"
-             id="g5111">
+             id="g5111"
+             style="fill:#000000">
             <text
                text-anchor="middle"
                x="0"
                y="435.39999"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#000000;fill-opacity:1"
                transform="translate(209.39)"
                id="text5109">1</text>
           </g>
           <g
              class="xtick"
-             id="g5115">
+             id="g5115"
+             style="fill:#000000">
             <text
                text-anchor="middle"
                x="0"
                y="435.39999"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#000000;fill-opacity:1"
                transform="translate(281.5)"
                id="text5113">100</text>
           </g>
           <g
              class="xtick"
-             id="g5119">
+             id="g5119"
+             style="fill:#000000">
             <text
                text-anchor="middle"
                x="0"
                y="435.39999"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#000000;fill-opacity:1"
                transform="translate(353.61)"
                id="text5117">10k</text>
           </g>
           <g
              class="xtick"
-             id="g5123">
+             id="g5123"
+             style="fill:#000000">
             <text
                text-anchor="middle"
                x="0"
                y="435.39999"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#000000;fill-opacity:1"
                transform="translate(425.72)"
                id="text5121">1M</text>
           </g>
           <g
              class="xtick"
-             id="g5127">
+             id="g5127"
+             style="fill:#000000">
             <text
                text-anchor="middle"
                x="0"
                y="435.39999"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#000000;fill-opacity:1"
                transform="translate(497.84)"
                id="text5125">100M</text>
           </g>
@@ -10059,8 +10066,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,394.69)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5131">OreMinFuel</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5131"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1997">OreMinFuel</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10070,8 +10079,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,350.06)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5135">MachElecTrans</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5135"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1995">MachElecTrans</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10081,8 +10092,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,305.44)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5139">ProcBio</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5139"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1993">ProcBio</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10092,8 +10105,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,260.81)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5143">MetalAlloy</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5143"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1991">MetalAlloy</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10103,8 +10118,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,216.19)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5147">AgriForeAnim</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5147"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1989">AgriForeAnim</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10114,8 +10131,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,171.56)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5151">PlastRub</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5151"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1987">PlastRub</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10125,8 +10144,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,126.94)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5155">GlasNonMetal</text>
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5155"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1985">GlasNonMetal</tspan></text>
           </g>
           <g
              class="ytick"
@@ -10136,8 +10157,10 @@
                x="123.6"
                y="4.1999998"
                transform="translate(0,82.31)"
-               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#2a3f5f;fill-opacity:1"
-               id="text5159">Chemical</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end;white-space:pre;fill:#2a3f5f;fill-opacity:1"
+               id="text5159"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+                 id="tspan1999">Chemical</tspan></text>
           </g>
         </g>
         <g
@@ -10148,7 +10171,7 @@
     <g
        class="infolayer"
        id="g5383"
-       transform="translate(-6.5550778,-59)">
+       transform="translate(33.444922,-59)">
       <g
          class="g-gtitle"
          id="g5373" />
@@ -10161,8 +10184,10 @@
            x="337"
            y="462.70038"
            text-anchor="middle"
-           style="font-size:14px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#2a3f5f;fill-opacity:1"
-           id="text5375">Total supply chain waste per product (kg/kg) (log10)</text>
+           style="font-size:14px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:middle;white-space:pre;opacity:1;fill:#2a3f5f;fill-opacity:1"
+           id="text5375"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
+             id="tspan2001">Total supply chain waste per product (kg/kg) (log10)</tspan></text>
       </g>
     </g>
   </g>

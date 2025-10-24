@@ -53,6 +53,62 @@ waste_stats_sci = waste_stats.applymap(lambda x: f"{x:.2e}")
 
 waste_stats_sci.to_csv(DIR_OUTPUT + "waste_statistics_by_category.csv", sep=";")
 
+# get summary stats for other methods
+# rare earths
+df_rare_earths_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+rare_earths_stats = df_rare_earths_stats.groupby("Category")["Rare Earth"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+rare_earths_stats_sci = rare_earths_stats.applymap(lambda x: f"{x:.2e}")
+rare_earths_stats_sci.to_csv(DIR_OUTPUT + "rare_earths_statistics_by_category.csv", sep=";")
+
+# natural gas
+df_natural_gas_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+natural_gas_stats = df_natural_gas_stats.groupby("Category")["Natural Gas"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+natural_gas_stats_sci = natural_gas_stats.applymap(lambda x: f"{x:.2e}")
+natural_gas_stats_sci.to_csv(DIR_OUTPUT + "natural_gas_statistics_by_category.csv", sep=";")
+
+# Natural Resources
+df_natural_resources_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+natural_resources_stats = df_natural_resources_stats.groupby("Category")["Natural Resources"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+natural_resources_stats_sci = natural_resources_stats.applymap(lambda x: f"{x:.2e}")
+natural_resources_stats_sci.to_csv(DIR_OUTPUT + "natural_resources_statistics_by_category.csv", sep=";")
+
+# Ecosystem Quality
+df_ecosystem_quality_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+ecosystem_quality_stats = df_ecosystem_quality_stats.groupby("Category")["Ecosystem Quality"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+ecosystem_quality_stats_sci = ecosystem_quality_stats.applymap(lambda x: f"{x:.2e}")
+ecosystem_quality_stats_sci.to_csv(DIR_OUTPUT + "ecosystem_quality_statistics_by_category.csv", sep=";")
+
+# Human Health
+df_human_health_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+human_health_stats = df_human_health_stats.groupby("Category")["Human Health"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+human_health_stats_sci = human_health_stats.applymap(lambda x: f"{x:.2e}")
+human_health_stats_sci.to_csv(DIR_OUTPUT + "human_health_statistics_by_category.csv", sep=";")
+
+# Waste - Circularity %
+df_waste_circularity_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+waste_circularity_stats = df_waste_circularity_stats.groupby("Category")["Waste - Circularity %"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+waste_circularity_stats_sci = waste_circularity_stats.applymap(lambda x: f"{x:.2e}")
+waste_circularity_stats_sci.to_csv(DIR_OUTPUT + "waste_circularity_statistics_by_category.csv", sep=";")
+
+# Waste - Hazardous %
+df_waste_hazardous_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
+waste_hazardous_stats = df_waste_hazardous_stats.groupby("Category")["Waste - Hazardous %"].agg(
+    ["mean", "median", "std", "min", "max"]
+)
+waste_hazardous_stats_sci = waste_hazardous_stats.applymap(lambda x: f"{x:.2e}")
+waste_hazardous_stats_sci.to_csv(DIR_OUTPUT + "waste_hazardous_statistics_by_category.csv", sep=";")
 
 # get the top 3 activities generating the most waste in each category
 cols = ["Name", "Waste - Total", "Category", "Price (EUR2005)"]
@@ -65,7 +121,39 @@ top_waste_activities.sort_values(by=["Category", "Waste - Total"], ascending=[Tr
 
 top_waste_activities.to_csv(DIR_OUTPUT + "top_waste_generating_activities_by_category.csv", sep=";", index=False)
 
+# get the top 3 activities for natural gas
+cols_ng = ["Name", "Natural Gas", "Category"]
+df_ng_top = df_natural_gas_stats[cols_ng]
+top_ng_activities = df_ng_top.sort_values(by="Natural Gas", ascending=False).groupby("Category").head(3)
+top_ng_activities.sort_values(by=["Category", "Natural Gas"], ascending=[True, False], inplace=True)
+top_ng_activities.to_csv(DIR_OUTPUT + "top_natural_gas_activities_by_category.csv", sep=";", index=False)
 
+# get the top 3 activities for rare earths
+cols_re = ["Name", "Rare Earth", "Category"]
+df_re_top = df_rare_earths_stats[cols_re]
+top_re_activities = df_re_top.sort_values(by="Rare Earth", ascending=False).groupby("Category").head(3)
+top_re_activities.sort_values(by=["Category", "Rare Earth"], ascending=[True, False], inplace=True)
+top_re_activities.to_csv(DIR_OUTPUT + "top_rare_earth_activities_by_category.csv", sep=";", index=False)    
+
+# Natural Resources
+cols_nr = ["Name", "Natural Resources", "Category"]
+df_nr_top = df_natural_resources_stats[cols_nr]
+top_nr_activities = df_nr_top.sort_values(by="Natural Resources", ascending=False).groupby("Category").head(3)
+top_nr_activities.sort_values(by=["Category", "Natural Resources"], ascending=[True, False], inplace=True)
+top_nr_activities.to_csv(DIR_OUTPUT + "top_natural_resources_activities_by_category.csv", sep=";", index=False)
+# Ecosystem Quality
+cols_eq = ["Name", "Ecosystem Quality", "Category"]
+df_eq_top = df_ecosystem_quality_stats[cols_eq]
+top_eq_activities = df_eq_top.sort_values(by="Ecosystem Quality", ascending=False).groupby("Category").head(3)
+top_eq_activities.sort_values(by=["Category", "Ecosystem Quality"], ascending=[True, False], inplace=True)
+top_eq_activities.to_csv(DIR_OUTPUT + "top_ecosystem_quality_activities_by_category.csv", sep=";", index=False)
+
+# Human Health
+cols_hh = ["Name", "Human Health", "Category"]
+df_hh_top = df_human_health_stats[cols_hh]
+top_hh_activities = df_hh_top.sort_values(by="Human Health", ascending=False).groupby("Category").head(3)
+top_hh_activities.sort_values(by=["Category", "Human Health"], ascending=[True, False], inplace=True)
+top_hh_activities.to_csv(DIR_OUTPUT + "top_human_health_activities_by_category.csv", sep=";", index=False)
 # calculate statistics about the price of activities in each category
 df_price_stats = df_results[df_results["Database"] == "ecoinvent-default-2020"]
 
@@ -74,3 +162,17 @@ price_stats = df_price_stats.groupby("Category")["Price (EUR2005)"].agg(
 )
 price_stats_sci = price_stats.applymap(lambda x: f"{x:.2e}")
 price_stats_sci.to_csv(DIR_OUTPUT + "price_statistics_by_category.csv", sep=";")
+
+# Waste - Circularity %
+cols_wc = ["Name", "Waste - Circularity %", "Category"]
+df_wc_top = df_waste_circularity_stats[cols_wc]
+top_wc_activities = df_wc_top.sort_values(by="Waste - Circularity %", ascending=False).groupby("Category").head(3)
+top_wc_activities.sort_values(by=["Category", "Waste - Circularity %"], ascending=[True, False], inplace=True)
+top_wc_activities.to_csv(DIR_OUTPUT + "top_waste_circularity_activities_by_category.csv", sep=";", index=False)
+
+# Waste - Hazardous %
+cols_wh = ["Name", "Waste - Hazardous %", "Category"]
+df_wh_top = df_waste_hazardous_stats[cols_wh]
+top_wh_activities = df_wh_top.sort_values(by="Waste - Hazardous %", ascending=False).groupby("Category").head(3)
+top_wh_activities.sort_values(by=["Category", "Waste - Hazardous %"], ascending=[True, False], inplace=True)
+top_wh_activities.to_csv(DIR_OUTPUT + "top_waste_hazardous_activities_by_category.csv", sep=";", index=False)
