@@ -1,0 +1,109 @@
+% Created by Dan O'Shea (@djoshea) 2022.
+% Inspired by https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers
+
+\documentclass[7pt,margin=1mm]{standalone}
+\PassOptionsToPackage{svgnames}{xcolor}
+\usepackage{tikz} 
+\usetikzlibrary{calc,intersections}
+
+%\usepackage{libertine}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\tikzset{
+    tile/.style = {
+        align=center,
+        minimum size=6mm,
+        anchor=north west,
+    },
+    col header/.style={
+        tile,
+        anchor=north west,
+        yshift=-1mm,
+        rotate=45,
+        inner sep=0,
+        outer sep=0,
+    },
+    row label/.style={
+        tile,
+        anchor=north east,
+        inner sep=0,
+        outer sep=0,
+        xshift=3mm,
+    },
+    legend line/.style={
+        anchor=north west,
+        inner xsep=0,
+        inner ysep=2mm,
+        outer sep=0,
+    },
+}
+
+% define the intensity levels here
+\def\hi{100}
+\def\mid{50}
+\def\lo{20}
+
+% and the 100% intensity color here, which will blended to white
+\colorlet{tilecolor}{Orchid}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+
+% column labels
+\foreach \a [count=\n] in {
+    SCM,    % Stewart Charles McDowall
+    CFB,    % Carlos Felipe Blanco
+    SC,      % Stefano Cucurachi
+    % ... (other authors, if any)
+} {
+    \node[col header] at (\n,0) {\a};
+}
+
+% row labels
+\foreach \a [count=\i] in {
+    Conceptualization,
+    Methodology,
+    Investigation,
+    Data curation,
+    Formal analysis,
+    Validation,
+    Visualisation,
+    % Resources,
+    Software,
+    Writing---Orig. Draft,
+    Writing---Rev. \& Ed.,
+    Funding acquisition,
+    Supervision,
+} {
+    \node[row label] at (0,-\i) {\a};
+}
+
+\foreach \y [count=\n] in {
+    % Intensity levels for each row label for SCM, CFB, SC...
+    % The intensity values (\hi, \mid, \lo, 0) should correspond to the level of contribution in the order of authors listed above
+    {\hi,\lo,\lo},  % Conceptualization
+    {\hi,\lo,\lo},    % Methodology
+    {\hi,0,0},        % Investigation
+    {\hi,0,0},        % Data curation
+    {\hi,0,0},        % Formal analysis
+    {\hi,\lo,\lo},        % Validation
+    {\hi,0,0},        % Visualisation
+    % {0,0,\mid},     % Resources (none specified)
+    {\hi,\mid,\lo},    % Software
+    {\hi,0,0},        % Writing---Original Draft
+    {\hi,\mid,\mid},  % Writing---Reviewing and Editing
+    {0,\lo,\hi},      % Funding acquisition
+    {0,\lo,\hi},      % Supervision
+} {
+    % heatmap tiles
+    \foreach \x [count=\m] in \y {
+        \node[fill=tilecolor!\x!white, tile, text=white] (tile) at (\m,-\n) {};
+    }
+}
+
+    % description below heatmap 
+    % \node [legend line] at (1, 0 |- tile.south) {*, $^\dagger$ these authors contributed equally};
+
+\end{tikzpicture}
+\end{document}
